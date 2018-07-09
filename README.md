@@ -1,5 +1,5 @@
-# CMS-SmartDataLayer
-Development of a new way of CMS data management, named CMS-SDL. 
+# CMS-SDL
+Development of a new way of CMS data management, named CMS-SDL, SDL is the acronym of Smart Data Layer
 
 # Introduction
 
