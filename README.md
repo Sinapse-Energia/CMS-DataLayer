@@ -14,11 +14,11 @@ In short, we want to develop a layer to provide expected data based in real coll
 
 # Getting started
 
-In order to start with the CMS-SDL development it is necessary to understand the CMS Data Model or at least some of their parts, like the historical data of the different kind of devices (End point devices, gateways and cmcs). In order to avoid bad practices we think is better to not provide rails models unless it is totally needed. We will provide:
+In order to start with the CMS-SDL development it is necessary to understand the CMS Data Model or at least some of their parts, like the historical data of the different kind of devices (End point devices, gateways and cmcs). In order to avoid bad practices we think is better to not provide rails models unless it is totally needed. We provide:
 
-- Migrations
-- Seeds
-- Example of database with historical data
+- Migrations: db folder in the code
+- Seeds: db folder in the code
+- Example of database with historical data: https://www.dropbox.com/s/3sdxlco4i2bl6zy/barcelona_190718.sql?dl=0
 
 # Rails Models vs REST API application
 
