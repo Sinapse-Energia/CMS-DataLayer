@@ -3,26 +3,39 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+step => 1  Things you may want to cover:
 
-* Ruby version
+step => 2  Generate a new model in the project
 
-* System dependencies
+	rails g model unreal_data_search ed_logicaldev_id:integer voltage:integer current:integer power:integer dimming:integer time_stamp:datetime real_data:boolean
 
-* Configuration
+step => 3  Migrate the db
+	
+	rake db:migrate
 
-* Database creation
+step => 4  copy the api get_monitoring_profile from EdLogicaldevsController and place them into their correct place
 
-* Database initialization
+step => 5  copy all the private methods of api and place them in private
 
-* How to run the test suite
+step => 6  postman request
 
-* Services (job queues, cache servers, search engines, etc.)
+	Api: GET
 
-* Deployment instructions
+	ApiUrl:
 
-* ...
+		http://localhost:4000/ed_logicaldevs/get_monitoring_profile?id=4&start_date='19/07/2018'&end_date='20/07/2018'&number_of_times=8&t_sampling=60&number_of_res=48
 
+		
+	Api parameter details:
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+		id => ed_logicaldev_id
+		
+		start_date => "dd/mm/yy"
+		
+		end_date => "dd/mm/yy"
+		
+		number_of_times => atleast how many time the each parameter [curent,voltage,power,dimming] occur
+		
+		t_sampling => time interval from beginning of the day
+
+		number_of_res => how much data you want in response with respect to time interval
