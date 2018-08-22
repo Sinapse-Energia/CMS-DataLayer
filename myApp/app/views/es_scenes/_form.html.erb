@@ -1,0 +1,25 @@
+<%= form_for(@es_scene) do |f| %>
+  <% if @es_scene.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@es_scene.errors.count, "error") %> prohibited this es_scene from being saved:</h2>
+
+      <ul>
+      <% @es_scene.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :scene_id %><br>
+    <%= f.text_field :scene_id %>
+  </div>
+  <div class="field">
+    <%= f.label :l_lightstate_id %><br>
+    <%= f.text_field :l_lightstate_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

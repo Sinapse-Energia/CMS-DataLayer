@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Vs Light Control Events</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vs_light_control_events.each do |vs_light_control_event| %>
+      <tr>
+        <td><%= vs_light_control_event.name %></td>
+        <td><%= link_to 'Show', vs_light_control_event %></td>
+        <td><%= link_to 'Edit', edit_vs_light_control_event_path(vs_light_control_event) %></td>
+        <td><%= link_to 'Destroy', vs_light_control_event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Vs light control event', new_vs_light_control_event_path %>

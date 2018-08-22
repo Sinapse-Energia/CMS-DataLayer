@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Si Physicaldevlamp Si Physicaldevgateways</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Si physicaldevlamp</th>
+      <th>Si physicaldevgateway</th>
+      <th>Distance lamp gateway</th>
+      <th>Distance level</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @si_physicaldevlamp_si_physicaldevgateways.each do |si_physicaldevlamp_si_physicaldevgateway| %>
+      <tr>
+        <td><%= si_physicaldevlamp_si_physicaldevgateway.si_physicaldevlamp %></td>
+        <td><%= si_physicaldevlamp_si_physicaldevgateway.si_physicaldevgateway %></td>
+        <td><%= si_physicaldevlamp_si_physicaldevgateway.distance_lamp_gateway %></td>
+        <td><%= si_physicaldevlamp_si_physicaldevgateway.distance_level %></td>
+        <td><%= link_to 'Show', si_physicaldevlamp_si_physicaldevgateway %></td>
+        <td><%= link_to 'Edit', edit_si_physicaldevlamp_si_physicaldevgateway_path(si_physicaldevlamp_si_physicaldevgateway) %></td>
+        <td><%= link_to 'Destroy', si_physicaldevlamp_si_physicaldevgateway, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Si physicaldevlamp si physicaldevgateway', new_si_physicaldevlamp_si_physicaldevgateway_path %>

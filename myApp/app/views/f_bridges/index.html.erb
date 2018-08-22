@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing F Bridges</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ed logicaldev</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @f_bridges.each do |f_bridge| %>
+      <tr>
+        <td><%= f_bridge.ed_logicaldev %></td>
+        <td><%= link_to 'Show', f_bridge %></td>
+        <td><%= link_to 'Edit', edit_f_bridge_path(f_bridge) %></td>
+        <td><%= link_to 'Destroy', f_bridge, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New F bridge', new_f_bridge_path %>

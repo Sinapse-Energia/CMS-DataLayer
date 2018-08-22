@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @ec_calendar.address %>
+</p>
+
+<p>
+  <strong>Ep controlprogram:</strong>
+  <%= @ec_calendar.ep_controlprogram %>
+</p>
+
+<p>
+  <strong>Seqbridge:</strong>
+  <%= @ec_calendar.seqbridge %>
+</p>
+
+<p>
+  <strong>Seqcms:</strong>
+  <%= @ec_calendar.seqcms %>
+</p>
+
+<p>
+  <strong>Actived:</strong>
+  <%= @ec_calendar.actived %>
+</p>
+
+<%= link_to 'Edit', edit_ec_calendar_path(@ec_calendar) %> |
+<%= link_to 'Back', ec_calendars_path %>

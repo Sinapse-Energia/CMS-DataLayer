@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Scene:</strong>
+  <%= @es_scene.scene %>
+</p>
+
+<p>
+  <strong>L lightstate:</strong>
+  <%= @es_scene.l_lightstate %>
+</p>
+
+<%= link_to 'Edit', edit_es_scene_path(@es_scene) %> |
+<%= link_to 'Back', es_scenes_path %>

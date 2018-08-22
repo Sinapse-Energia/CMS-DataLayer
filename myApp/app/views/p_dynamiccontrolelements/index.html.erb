@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing P Dynamiccontrolelements</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Start time</th>
+      <th>End time</th>
+      <th>Is fixed</th>
+      <th>P dynamicoperation</th>
+      <th>L lightcommand</th>
+      <th>L sensor</th>
+      <th>Ep controlprogram</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @p_dynamiccontrolelements.each do |p_dynamiccontrolelement| %>
+      <tr>
+        <td><%= p_dynamiccontrolelement.start_time %></td>
+        <td><%= p_dynamiccontrolelement.end_time %></td>
+        <td><%= p_dynamiccontrolelement.is_fixed %></td>
+        <td><%= p_dynamiccontrolelement.p_dynamicoperation %></td>
+        <td><%= p_dynamiccontrolelement.l_lightcommand %></td>
+        <td><%= p_dynamiccontrolelement.l_sensor %></td>
+        <td><%= p_dynamiccontrolelement.ep_controlprogram %></td>
+        <td><%= link_to 'Show', p_dynamiccontrolelement %></td>
+        <td><%= link_to 'Edit', edit_p_dynamiccontrolelement_path(p_dynamiccontrolelement) %></td>
+        <td><%= link_to 'Destroy', p_dynamiccontrolelement, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New P dynamiccontrolelement', new_p_dynamiccontrolelement_path %>

@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Si Alarm Lamps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Threshold</th>
+      <th>Num repeat</th>
+      <th>Notif email</th>
+      <th>Ids lista email</th>
+      <th>Notif sms</th>
+      <th>Ids list sms</th>
+      <th>V type alarm lamp</th>
+      <th>V threshold type</th>
+      <th>Name</th>
+      <th>Si mqtt type alarm epd</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @si_alarm_lamps.each do |si_alarm_lamp| %>
+      <tr>
+        <td><%= si_alarm_lamp.threshold %></td>
+        <td><%= si_alarm_lamp.num_repeat %></td>
+        <td><%= si_alarm_lamp.notif_email %></td>
+        <td><%= si_alarm_lamp.ids_lista_email %></td>
+        <td><%= si_alarm_lamp.notif_sms %></td>
+        <td><%= si_alarm_lamp.ids_list_sms %></td>
+        <td><%= si_alarm_lamp.v_type_alarm_lamp %></td>
+        <td><%= si_alarm_lamp.v_threshold_type %></td>
+        <td><%= si_alarm_lamp.name %></td>
+        <td><%= si_alarm_lamp.si_mqtt_type_alarm_epd %></td>
+        <td><%= link_to 'Show', si_alarm_lamp %></td>
+        <td><%= link_to 'Edit', edit_si_alarm_lamp_path(si_alarm_lamp) %></td>
+        <td><%= link_to 'Destroy', si_alarm_lamp, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Si alarm lamp', new_si_alarm_lamp_path %>

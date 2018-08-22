@@ -1,0 +1,37 @@
+<%= form_for(@si_general_information) do |f| %>
+  <% if @si_general_information.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@si_general_information.errors.count, "error") %> prohibited this si_general_information from being saved:</h2>
+
+      <ul>
+      <% @si_general_information.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_area :name %>
+  </div>
+  <div class="field">
+    <%= f.label :broker %><br>
+    <%= f.text_field :broker %>
+  </div>
+  <div class="field">
+    <%= f.label :port %><br>
+    <%= f.number_field :port %>
+  </div>
+  <div class="field">
+    <%= f.label :user %><br>
+    <%= f.text_field :user %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br>
+    <%= f.text_field :password %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

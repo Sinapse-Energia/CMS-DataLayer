@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Vf Photocell Events</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vf_photocell_events.each do |vf_photocell_event| %>
+      <tr>
+        <td><%= vf_photocell_event.name %></td>
+        <td><%= link_to 'Show', vf_photocell_event %></td>
+        <td><%= link_to 'Edit', edit_vf_photocell_event_path(vf_photocell_event) %></td>
+        <td><%= link_to 'Destroy', vf_photocell_event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Vf photocell event', new_vf_photocell_event_path %>

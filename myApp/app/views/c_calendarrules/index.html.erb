@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing C Calendarrules</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Start date</th>
+      <th>End date</th>
+      <th>Ep controlprogram</th>
+      <th>Ec calendar</th>
+      <th>Always</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @c_calendarrules.each do |c_calendarrule| %>
+      <tr>
+        <td><%= c_calendarrule.start_date %></td>
+        <td><%= c_calendarrule.end_date %></td>
+        <td><%= c_calendarrule.ep_controlprogram %></td>
+        <td><%= c_calendarrule.ec_calendar %></td>
+        <td><%= c_calendarrule.always %></td>
+        <td><%= link_to 'Show', c_calendarrule %></td>
+        <td><%= link_to 'Edit', edit_c_calendarrule_path(c_calendarrule) %></td>
+        <td><%= link_to 'Destroy', c_calendarrule, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New C calendarrule', new_c_calendarrule_path %>

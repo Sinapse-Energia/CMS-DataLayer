@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  logical_address: MyText
+  si_mqtt_type_alarm_ap_id: 
+  value: MyText
+  time_stamp: 2018-08-08 11:26:41
+
+two:
+  logical_address: MyText
+  si_mqtt_type_alarm_ap_id: 
+  value: MyText
+  time_stamp: 2018-08-08 11:26:41

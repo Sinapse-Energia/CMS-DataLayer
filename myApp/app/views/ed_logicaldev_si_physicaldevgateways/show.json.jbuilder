@@ -1,0 +1,1 @@
+json.partial! "ed_logicaldev_si_physicaldevgateways/ed_logicaldev_si_physicaldevgateway", ed_logicaldev_si_physicaldevgateway: @ed_logicaldev_si_physicaldevgateway

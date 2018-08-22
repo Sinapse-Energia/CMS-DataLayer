@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ed_logicaldev_id: 
+  adesc_felectricalmeter_id: 
+  value: MyText
+  time_stamp: 2018-08-08 11:24:22
+  type_count: MyText
+
+two:
+  ed_logicaldev_id: 
+  adesc_felectricalmeter_id: 
+  value: MyText
+  time_stamp: 2018-08-08 11:24:22
+  type_count: MyText

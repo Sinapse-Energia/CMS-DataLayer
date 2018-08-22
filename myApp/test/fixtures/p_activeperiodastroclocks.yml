@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sunset_offset: 1
+  sunrise_offset: 1
+  ep_controlprogram_id: 
+
+two:
+  sunset_offset: 1
+  sunrise_offset: 1
+  ep_controlprogram_id: 

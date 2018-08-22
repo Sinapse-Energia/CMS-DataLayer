@@ -1,0 +1,1 @@
+json.partial! "ar_flampactuator_defaultlightstates/ar_flampactuator_defaultlightstate", ar_flampactuator_defaultlightstate: @ar_flampactuator_defaultlightstate

@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Vf Communication Events</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vf_communication_events.each do |vf_communication_event| %>
+      <tr>
+        <td><%= vf_communication_event.name %></td>
+        <td><%= link_to 'Show', vf_communication_event %></td>
+        <td><%= link_to 'Edit', edit_vf_communication_event_path(vf_communication_event) %></td>
+        <td><%= link_to 'Destroy', vf_communication_event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Vf communication event', new_vf_communication_event_path %>

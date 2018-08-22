@@ -1,0 +1,1 @@
+json.partial! "ar_flampactuator_actuallightstates/ar_flampactuator_actuallightstate", ar_flampactuator_actuallightstate: @ar_flampactuator_actuallightstate

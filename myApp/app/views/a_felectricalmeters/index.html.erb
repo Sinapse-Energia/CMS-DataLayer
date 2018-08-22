@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing A Felectricalmeters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Seqbridge</th>
+      <th>Seqcms</th>
+      <th>Adesc felectricalmeter</th>
+      <th>F electricalmeter</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @a_felectricalmeters.each do |a_felectricalmeter| %>
+      <tr>
+        <td><%= a_felectricalmeter.value %></td>
+        <td><%= a_felectricalmeter.seqbridge %></td>
+        <td><%= a_felectricalmeter.seqcms %></td>
+        <td><%= a_felectricalmeter.adesc_felectricalmeter %></td>
+        <td><%= a_felectricalmeter.f_electricalmeter %></td>
+        <td><%= link_to 'Show', a_felectricalmeter %></td>
+        <td><%= link_to 'Edit', edit_a_felectricalmeter_path(a_felectricalmeter) %></td>
+        <td><%= link_to 'Destroy', a_felectricalmeter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New A felectricalmeter', new_a_felectricalmeter_path %>

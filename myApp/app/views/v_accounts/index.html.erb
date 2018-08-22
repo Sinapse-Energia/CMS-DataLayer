@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing V Accounts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @v_accounts.each do |v_account| %>
+      <tr>
+        <td><%= v_account.description %></td>
+        <td><%= link_to 'Show', v_account %></td>
+        <td><%= link_to 'Edit', edit_v_account_path(v_account) %></td>
+        <td><%= link_to 'Destroy', v_account, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New V account', new_v_account_path %>

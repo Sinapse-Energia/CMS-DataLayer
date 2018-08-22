@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Si Physicaldevcircuits</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type circuit</th>
+      <th>Magnetotermic</th>
+      <th>Differencial</th>
+      <th>Conductor type</th>
+      <th>Conductor section</th>
+      <th>Canalization type</th>
+      <th>Si physicaldevpanel</th>
+      <th>Circuit number</th>
+      <th>Telemanagement</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @si_physicaldevcircuits.each do |si_physicaldevcircuit| %>
+      <tr>
+        <td><%= si_physicaldevcircuit.name %></td>
+        <td><%= si_physicaldevcircuit.type_circuit %></td>
+        <td><%= si_physicaldevcircuit.magnetotermic %></td>
+        <td><%= si_physicaldevcircuit.differencial %></td>
+        <td><%= si_physicaldevcircuit.conductor_type %></td>
+        <td><%= si_physicaldevcircuit.conductor_section %></td>
+        <td><%= si_physicaldevcircuit.canalization_type %></td>
+        <td><%= si_physicaldevcircuit.si_physicaldevpanel %></td>
+        <td><%= si_physicaldevcircuit.circuit_number %></td>
+        <td><%= si_physicaldevcircuit.telemanagement %></td>
+        <td><%= link_to 'Show', si_physicaldevcircuit %></td>
+        <td><%= link_to 'Edit', edit_si_physicaldevcircuit_path(si_physicaldevcircuit) %></td>
+        <td><%= link_to 'Destroy', si_physicaldevcircuit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Si physicaldevcircuit', new_si_physicaldevcircuit_path %>

@@ -1,0 +1,2 @@
+module EdLogicaldevSiPhysicaldevpanelsHelper
+end

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  address: MyText
+  seqbridge: 1
+  seqcms: 1
+  ed_classlogicaldev_id: 
+  qr: MyText
+
+two:
+  name: MyText
+  address: MyText
+  seqbridge: 1
+  seqcms: 1
+  ed_classlogicaldev_id: 
+  qr: MyText

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing V Typeregulators</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Short name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @v_typeregulators.each do |v_typeregulator| %>
+      <tr>
+        <td><%= v_typeregulator.name %></td>
+        <td><%= v_typeregulator.short_name %></td>
+        <td><%= link_to 'Show', v_typeregulator %></td>
+        <td><%= link_to 'Edit', edit_v_typeregulator_path(v_typeregulator) %></td>
+        <td><%= link_to 'Destroy', v_typeregulator, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New V typeregulator', new_v_typeregulator_path %>

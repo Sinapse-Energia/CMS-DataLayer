@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing C Rulesconditions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>V ruletypecondition</th>
+      <th>C calendarrule</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @c_rulesconditions.each do |c_rulescondition| %>
+      <tr>
+        <td><%= c_rulescondition.v_ruletypecondition %></td>
+        <td><%= c_rulescondition.c_calendarrule %></td>
+        <td><%= link_to 'Show', c_rulescondition %></td>
+        <td><%= link_to 'Edit', edit_c_rulescondition_path(c_rulescondition) %></td>
+        <td><%= link_to 'Destroy', c_rulescondition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New C rulescondition', new_c_rulescondition_path %>

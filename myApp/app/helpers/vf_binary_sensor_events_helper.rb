@@ -1,0 +1,2 @@
+module VfBinarySensorEventsHelper
+end

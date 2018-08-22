@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Ed Logicaldev Vf Basic Events</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ed logicaldev</th>
+      <th>V f basic event</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ed_logicaldev_vf_basic_events.each do |ed_logicaldev_vf_basic_event| %>
+      <tr>
+        <td><%= ed_logicaldev_vf_basic_event.ed_logicaldev %></td>
+        <td><%= ed_logicaldev_vf_basic_event.v_f_basic_event %></td>
+        <td><%= link_to 'Show', ed_logicaldev_vf_basic_event %></td>
+        <td><%= link_to 'Edit', edit_ed_logicaldev_vf_basic_event_path(ed_logicaldev_vf_basic_event) %></td>
+        <td><%= link_to 'Destroy', ed_logicaldev_vf_basic_event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ed logicaldev vf basic event', new_ed_logicaldev_vf_basic_event_path %>

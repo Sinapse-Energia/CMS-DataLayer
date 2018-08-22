@@ -1,0 +1,25 @@
+<%= form_for(@p_controlprogramtype) do |f| %>
+  <% if @p_controlprogramtype.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@p_controlprogramtype.errors.count, "error") %> prohibited this p_controlprogramtype from being saved:</h2>
+
+      <ul>
+      <% @p_controlprogramtype.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ep_controlprogram_id %><br>
+    <%= f.text_field :ep_controlprogram_id %>
+  </div>
+  <div class="field">
+    <%= f.label :v_typeactiveperiod_id %><br>
+    <%= f.text_field :v_typeactiveperiod_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

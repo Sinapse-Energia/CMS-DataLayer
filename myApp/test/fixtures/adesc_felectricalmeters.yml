@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  v_storagetype_id: 
+  unit: MyText
+  minvalue: MyText
+  maxvalue: MyText
+  regex: MyText
+  enumeration: MyText
+  read_only: false
+  maxinstances: 1
+  descr: MyText
+  lightcommand: MyText
+
+two:
+  name: MyText
+  v_storagetype_id: 
+  unit: MyText
+  minvalue: MyText
+  maxvalue: MyText
+  regex: MyText
+  enumeration: MyText
+  read_only: false
+  maxinstances: 1
+  descr: MyText
+  lightcommand: MyText

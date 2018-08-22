@@ -1,0 +1,37 @@
+<%= form_for(@a_fbasic) do |f| %>
+  <% if @a_fbasic.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@a_fbasic.errors.count, "error") %> prohibited this a_fbasic from being saved:</h2>
+
+      <ul>
+      <% @a_fbasic.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :value %><br>
+    <%= f.text_area :value %>
+  </div>
+  <div class="field">
+    <%= f.label :seqbridge %><br>
+    <%= f.number_field :seqbridge %>
+  </div>
+  <div class="field">
+    <%= f.label :seqcms %><br>
+    <%= f.number_field :seqcms %>
+  </div>
+  <div class="field">
+    <%= f.label :adesc_fbasic_id %><br>
+    <%= f.text_field :adesc_fbasic_id %>
+  </div>
+  <div class="field">
+    <%= f.label :f_basic_id %><br>
+    <%= f.text_field :f_basic_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

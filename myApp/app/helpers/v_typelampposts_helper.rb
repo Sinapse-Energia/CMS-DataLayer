@@ -1,0 +1,2 @@
+module VTypelamppostsHelper
+end

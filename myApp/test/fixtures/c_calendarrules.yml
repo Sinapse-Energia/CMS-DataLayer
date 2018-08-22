@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start_date: 2018-08-08 11:24:50
+  end_date: 2018-08-08 11:24:50
+  ep_controlprogram_id: 
+  ec_calendar_id: 
+  always: false
+
+two:
+  start_date: 2018-08-08 11:24:50
+  end_date: 2018-08-08 11:24:50
+  ep_controlprogram_id: 
+  ec_calendar_id: 
+  always: false

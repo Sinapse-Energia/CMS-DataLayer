@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing P Controlprogramtypes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ep controlprogram</th>
+      <th>V typeactiveperiod</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @p_controlprogramtypes.each do |p_controlprogramtype| %>
+      <tr>
+        <td><%= p_controlprogramtype.ep_controlprogram %></td>
+        <td><%= p_controlprogramtype.v_typeactiveperiod %></td>
+        <td><%= link_to 'Show', p_controlprogramtype %></td>
+        <td><%= link_to 'Edit', edit_p_controlprogramtype_path(p_controlprogramtype) %></td>
+        <td><%= link_to 'Destroy', p_controlprogramtype, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New P controlprogramtype', new_p_controlprogramtype_path %>

@@ -1,0 +1,45 @@
+<%= form_for(@p_dynamiccontrolelement) do |f| %>
+  <% if @p_dynamiccontrolelement.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@p_dynamiccontrolelement.errors.count, "error") %> prohibited this p_dynamiccontrolelement from being saved:</h2>
+
+      <ul>
+      <% @p_dynamiccontrolelement.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :start_time %><br>
+    <%= f.time_select :start_time %>
+  </div>
+  <div class="field">
+    <%= f.label :end_time %><br>
+    <%= f.time_select :end_time %>
+  </div>
+  <div class="field">
+    <%= f.label :is_fixed %><br>
+    <%= f.check_box :is_fixed %>
+  </div>
+  <div class="field">
+    <%= f.label :p_dynamicoperation_id %><br>
+    <%= f.text_field :p_dynamicoperation_id %>
+  </div>
+  <div class="field">
+    <%= f.label :l_lightcommand_id %><br>
+    <%= f.text_field :l_lightcommand_id %>
+  </div>
+  <div class="field">
+    <%= f.label :l_sensor_id %><br>
+    <%= f.text_field :l_sensor_id %>
+  </div>
+  <div class="field">
+    <%= f.label :ep_controlprogram_id %><br>
+    <%= f.text_field :ep_controlprogram_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Ar Flampactuator Scenes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>F lampactuator</th>
+      <th>Es scene</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ar_flampactuator_scenes.each do |ar_flampactuator_scene| %>
+      <tr>
+        <td><%= ar_flampactuator_scene.f_lampactuator %></td>
+        <td><%= ar_flampactuator_scene.es_scene %></td>
+        <td><%= link_to 'Show', ar_flampactuator_scene %></td>
+        <td><%= link_to 'Edit', edit_ar_flampactuator_scene_path(ar_flampactuator_scene) %></td>
+        <td><%= link_to 'Destroy', ar_flampactuator_scene, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ar flampactuator scene', new_ar_flampactuator_scene_path %>

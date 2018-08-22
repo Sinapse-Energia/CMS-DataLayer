@@ -1,0 +1,2 @@
+json.extract! si_physicaldevpanel, :id, :name, :cod_ident, :location, :longitude, :latitude, :altitude, :date_installation, :date_data, :cod_module, :name_vial, :number_vial, :power_installed, :power_contracted, :switch_general, :protection_mag, :protection_diff, :number_supply, :number_countpower, :clock_brand, :clock_model, :number_circuit, :v_typecommand_id, :created_at, :updated_at
+json.url si_physicaldevpanel_url(si_physicaldevpanel, format: :json)

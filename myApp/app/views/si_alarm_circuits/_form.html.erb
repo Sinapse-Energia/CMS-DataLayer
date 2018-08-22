@@ -1,0 +1,49 @@
+<%= form_for(@si_alarm_circuit) do |f| %>
+  <% if @si_alarm_circuit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@si_alarm_circuit.errors.count, "error") %> prohibited this si_alarm_circuit from being saved:</h2>
+
+      <ul>
+      <% @si_alarm_circuit.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :threshold %><br>
+    <%= f.number_field :threshold %>
+  </div>
+  <div class="field">
+    <%= f.label :num_repeat %><br>
+    <%= f.number_field :num_repeat %>
+  </div>
+  <div class="field">
+    <%= f.label :notif_email %><br>
+    <%= f.check_box :notif_email %>
+  </div>
+  <div class="field">
+    <%= f.label :ids_lista_email %><br>
+    <%= f.number_field :ids_lista_email %>
+  </div>
+  <div class="field">
+    <%= f.label :notif_sms %><br>
+    <%= f.check_box :notif_sms %>
+  </div>
+  <div class="field">
+    <%= f.label :ids_list_sms %><br>
+    <%= f.number_field :ids_list_sms %>
+  </div>
+  <div class="field">
+    <%= f.label :v_type_alarm_circuit_id %><br>
+    <%= f.text_field :v_type_alarm_circuit_id %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_area :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

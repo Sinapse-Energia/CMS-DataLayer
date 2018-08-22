@@ -1,0 +1,25 @@
+<%= form_for(@c_rulescondition) do |f| %>
+  <% if @c_rulescondition.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@c_rulescondition.errors.count, "error") %> prohibited this c_rulescondition from being saved:</h2>
+
+      <ul>
+      <% @c_rulescondition.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :v_ruletypecondition_id %><br>
+    <%= f.text_field :v_ruletypecondition_id %>
+  </div>
+  <div class="field">
+    <%= f.label :c_calendarrule_id %><br>
+    <%= f.text_field :c_calendarrule_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

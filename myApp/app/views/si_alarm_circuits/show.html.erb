@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Threshold:</strong>
+  <%= @si_alarm_circuit.threshold %>
+</p>
+
+<p>
+  <strong>Num repeat:</strong>
+  <%= @si_alarm_circuit.num_repeat %>
+</p>
+
+<p>
+  <strong>Notif email:</strong>
+  <%= @si_alarm_circuit.notif_email %>
+</p>
+
+<p>
+  <strong>Ids lista email:</strong>
+  <%= @si_alarm_circuit.ids_lista_email %>
+</p>
+
+<p>
+  <strong>Notif sms:</strong>
+  <%= @si_alarm_circuit.notif_sms %>
+</p>
+
+<p>
+  <strong>Ids list sms:</strong>
+  <%= @si_alarm_circuit.ids_list_sms %>
+</p>
+
+<p>
+  <strong>V type alarm circuit:</strong>
+  <%= @si_alarm_circuit.v_type_alarm_circuit %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @si_alarm_circuit.name %>
+</p>
+
+<%= link_to 'Edit', edit_si_alarm_circuit_path(@si_alarm_circuit) %> |
+<%= link_to 'Back', si_alarm_circuits_path %>

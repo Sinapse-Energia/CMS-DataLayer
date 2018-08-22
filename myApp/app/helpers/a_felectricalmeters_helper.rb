@@ -1,0 +1,2 @@
+module AFelectricalmetersHelper
+end

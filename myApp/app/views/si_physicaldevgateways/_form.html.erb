@@ -1,0 +1,45 @@
+<%= form_for(@si_physicaldevgateway) do |f| %>
+  <% if @si_physicaldevgateway.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@si_physicaldevgateway.errors.count, "error") %> prohibited this si_physicaldevgateway from being saved:</h2>
+
+      <ul>
+      <% @si_physicaldevgateway.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_area :name %>
+  </div>
+  <div class="field">
+    <%= f.label :name_vial %><br>
+    <%= f.text_area :name_vial %>
+  </div>
+  <div class="field">
+    <%= f.label :number_vial %><br>
+    <%= f.text_area :number_vial %>
+  </div>
+  <div class="field">
+    <%= f.label :longitude %><br>
+    <%= f.text_field :longitude %>
+  </div>
+  <div class="field">
+    <%= f.label :latitude %><br>
+    <%= f.text_field :latitude %>
+  </div>
+  <div class="field">
+    <%= f.label :altitude %><br>
+    <%= f.text_field :altitude %>
+  </div>
+  <div class="field">
+    <%= f.label :date_installation %><br>
+    <%= f.datetime_select :date_installation %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

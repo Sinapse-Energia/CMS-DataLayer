@@ -1,0 +1,1 @@
+json.array! @ed_logicaldev_vs_data_collect_events, partial: 'ed_logicaldev_vs_data_collect_events/ed_logicaldev_vs_data_collect_event', as: :ed_logicaldev_vs_data_collect_event

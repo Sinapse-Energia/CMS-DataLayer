@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  l_lightstate_id: 
+  es_scene_id: 
+  v_reason_id: 
+  cms_refid: MyText
+  ref_addr_control: MyText
+  ref_addr_sensor: MyText
+  expiration: 2018-08-08 11:26:09
+  v_action_id: 
+
+two:
+  l_lightstate_id: 
+  es_scene_id: 
+  v_reason_id: 
+  cms_refid: MyText
+  ref_addr_control: MyText
+  ref_addr_sensor: MyText
+  expiration: 2018-08-08 11:26:09
+  v_action_id: 

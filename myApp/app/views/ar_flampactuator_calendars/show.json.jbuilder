@@ -1,0 +1,1 @@
+json.partial! "ar_flampactuator_calendars/ar_flampactuator_calendar", ar_flampactuator_calendar: @ar_flampactuator_calendar

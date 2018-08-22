@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start_time: 2018-08-08 11:26:25
+  l_lightcommand_id: 
+  ep_controlprogram_id: 
+  off_set: 1
+  v_astroclock_id: 
+  v_typeexecution_id: 
+
+two:
+  start_time: 2018-08-08 11:26:25
+  l_lightcommand_id: 
+  ep_controlprogram_id: 
+  off_set: 1
+  v_astroclock_id: 
+  v_typeexecution_id: 

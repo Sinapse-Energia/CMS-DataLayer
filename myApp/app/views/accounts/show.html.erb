@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Subdomain:</strong>
+  <%= @account.subdomain %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @account.owner %>
+</p>
+
+<p>
+  <strong>V account:</strong>
+  <%= @account.v_account %>
+</p>
+
+<%= link_to 'Edit', edit_account_path(@account) %> |
+<%= link_to 'Back', accounts_path %>

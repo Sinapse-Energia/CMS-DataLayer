@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing V Threshold Types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @v_threshold_types.each do |v_threshold_type| %>
+      <tr>
+        <td><%= v_threshold_type.name %></td>
+        <td><%= link_to 'Show', v_threshold_type %></td>
+        <td><%= link_to 'Edit', edit_v_threshold_type_path(v_threshold_type) %></td>
+        <td><%= link_to 'Destroy', v_threshold_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New V threshold type', new_v_threshold_type_path %>

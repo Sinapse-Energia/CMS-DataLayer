@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing P Activeperiodastroclocks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sunset offset</th>
+      <th>Sunrise offset</th>
+      <th>Ep controlprogram</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @p_activeperiodastroclocks.each do |p_activeperiodastroclock| %>
+      <tr>
+        <td><%= p_activeperiodastroclock.sunset_offset %></td>
+        <td><%= p_activeperiodastroclock.sunrise_offset %></td>
+        <td><%= p_activeperiodastroclock.ep_controlprogram %></td>
+        <td><%= link_to 'Show', p_activeperiodastroclock %></td>
+        <td><%= link_to 'Edit', edit_p_activeperiodastroclock_path(p_activeperiodastroclock) %></td>
+        <td><%= link_to 'Destroy', p_activeperiodastroclock, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New P activeperiodastroclock', new_p_activeperiodastroclock_path %>

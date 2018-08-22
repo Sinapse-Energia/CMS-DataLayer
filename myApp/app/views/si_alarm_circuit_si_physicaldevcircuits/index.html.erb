@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Si Alarm Circuit Si Physicaldevcircuits</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Si alarm circuit</th>
+      <th>Si physicaldevcircuit</th>
+      <th>Is group</th>
+      <th>Is single</th>
+      <th>Eg group</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @si_alarm_circuit_si_physicaldevcircuits.each do |si_alarm_circuit_si_physicaldevcircuit| %>
+      <tr>
+        <td><%= si_alarm_circuit_si_physicaldevcircuit.si_alarm_circuit %></td>
+        <td><%= si_alarm_circuit_si_physicaldevcircuit.si_physicaldevcircuit %></td>
+        <td><%= si_alarm_circuit_si_physicaldevcircuit.is_group %></td>
+        <td><%= si_alarm_circuit_si_physicaldevcircuit.is_single %></td>
+        <td><%= si_alarm_circuit_si_physicaldevcircuit.eg_group %></td>
+        <td><%= link_to 'Show', si_alarm_circuit_si_physicaldevcircuit %></td>
+        <td><%= link_to 'Edit', edit_si_alarm_circuit_si_physicaldevcircuit_path(si_alarm_circuit_si_physicaldevcircuit) %></td>
+        <td><%= link_to 'Destroy', si_alarm_circuit_si_physicaldevcircuit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Si alarm circuit si physicaldevcircuit', new_si_alarm_circuit_si_physicaldevcircuit_path %>

@@ -1,0 +1,2 @@
+module EdLogicaldevVfLampmonitorEventsHelper
+end

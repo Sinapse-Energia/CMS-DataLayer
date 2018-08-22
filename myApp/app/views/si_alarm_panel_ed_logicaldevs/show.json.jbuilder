@@ -1,0 +1,1 @@
+json.partial! "si_alarm_panel_ed_logicaldevs/si_alarm_panel_ed_logicaldev", si_alarm_panel_ed_logicaldev: @si_alarm_panel_ed_logicaldev

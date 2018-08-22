@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @l_lightstate.level %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @l_lightstate.description %>
+</p>
+
+<%= link_to 'Edit', edit_l_lightstate_path(@l_lightstate) %> |
+<%= link_to 'Back', l_lightstates_path %>

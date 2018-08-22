@@ -1,0 +1,1 @@
+json.partial! "ar_flampactuator_defaultscenestates/ar_flampactuator_defaultscenestate", ar_flampactuator_defaultscenestate: @ar_flampactuator_defaultscenestate

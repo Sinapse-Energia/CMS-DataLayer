@@ -1,0 +1,49 @@
+<%= form_for(@l_lightcommand) do |f| %>
+  <% if @l_lightcommand.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@l_lightcommand.errors.count, "error") %> prohibited this l_lightcommand from being saved:</h2>
+
+      <ul>
+      <% @l_lightcommand.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :l_lightstate_id %><br>
+    <%= f.text_field :l_lightstate_id %>
+  </div>
+  <div class="field">
+    <%= f.label :es_scene_id %><br>
+    <%= f.text_field :es_scene_id %>
+  </div>
+  <div class="field">
+    <%= f.label :v_reason_id %><br>
+    <%= f.text_field :v_reason_id %>
+  </div>
+  <div class="field">
+    <%= f.label :cms_refid %><br>
+    <%= f.text_area :cms_refid %>
+  </div>
+  <div class="field">
+    <%= f.label :ref_addr_control %><br>
+    <%= f.text_area :ref_addr_control %>
+  </div>
+  <div class="field">
+    <%= f.label :ref_addr_sensor %><br>
+    <%= f.text_area :ref_addr_sensor %>
+  </div>
+  <div class="field">
+    <%= f.label :expiration %><br>
+    <%= f.datetime_select :expiration %>
+  </div>
+  <div class="field">
+    <%= f.label :v_action_id %><br>
+    <%= f.text_field :v_action_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

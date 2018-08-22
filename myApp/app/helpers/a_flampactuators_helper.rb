@@ -1,0 +1,2 @@
+module AFlampactuatorsHelper
+end

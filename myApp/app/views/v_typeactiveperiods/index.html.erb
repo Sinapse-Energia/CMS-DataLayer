@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing V Typeactiveperiods</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @v_typeactiveperiods.each do |v_typeactiveperiod| %>
+      <tr>
+        <td><%= v_typeactiveperiod.name %></td>
+        <td><%= link_to 'Show', v_typeactiveperiod %></td>
+        <td><%= link_to 'Edit', edit_v_typeactiveperiod_path(v_typeactiveperiod) %></td>
+        <td><%= link_to 'Destroy', v_typeactiveperiod, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New V typeactiveperiod', new_v_typeactiveperiod_path %>

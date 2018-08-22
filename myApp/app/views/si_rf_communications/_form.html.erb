@@ -1,0 +1,97 @@
+<%= form_for(@si_rf_communication) do |f| %>
+  <% if @si_rf_communication.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@si_rf_communication.errors.count, "error") %> prohibited this si_rf_communication from being saved:</h2>
+
+      <ul>
+      <% @si_rf_communication.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ed_logicaldev_id %><br>
+    <%= f.text_field :ed_logicaldev_id %>
+  </div>
+  <div class="field">
+    <%= f.label :historical_valid %><br>
+    <%= f.number_field :historical_valid %>
+  </div>
+  <div class="field">
+    <%= f.label :historical_not_valid %><br>
+    <%= f.number_field :historical_not_valid %>
+  </div>
+  <div class="field">
+    <%= f.label :last_day_valid %><br>
+    <%= f.number_field :last_day_valid %>
+  </div>
+  <div class="field">
+    <%= f.label :last_day_not_valid %><br>
+    <%= f.number_field :last_day_not_valid %>
+  </div>
+  <div class="field">
+    <%= f.label :last_x_valid %><br>
+    <%= f.number_field :last_x_valid %>
+  </div>
+  <div class="field">
+    <%= f.label :last_x_not_valid %><br>
+    <%= f.number_field :last_x_not_valid %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.number_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :repeater %><br>
+    <%= f.check_box :repeater %>
+  </div>
+  <div class="field">
+    <%= f.label :previous_last_day_valid %><br>
+    <%= f.number_field :previous_last_day_valid %>
+  </div>
+  <div class="field">
+    <%= f.label :previous_last_day_not_valid %><br>
+    <%= f.number_field :previous_last_day_not_valid %>
+  </div>
+  <div class="field">
+    <%= f.label :lamp_status %><br>
+    <%= f.number_field :lamp_status %>
+  </div>
+  <div class="field">
+    <%= f.label :alert_status %><br>
+    <%= f.check_box :alert_status %>
+  </div>
+  <div class="field">
+    <%= f.label :rf_coverage %><br>
+    <%= f.number_field :rf_coverage %>
+  </div>
+  <div class="field">
+    <%= f.label :rf_valid %><br>
+    <%= f.number_field :rf_valid %>
+  </div>
+  <div class="field">
+    <%= f.label :rf_not_valid %><br>
+    <%= f.number_field :rf_not_valid %>
+  </div>
+  <div class="field">
+    <%= f.label :rf_coverage_pd %><br>
+    <%= f.number_field :rf_coverage_pd %>
+  </div>
+  <div class="field">
+    <%= f.label :rf_valid_pd %><br>
+    <%= f.number_field :rf_valid_pd %>
+  </div>
+  <div class="field">
+    <%= f.label :rf_not_valid_pd %><br>
+    <%= f.number_field :rf_not_valid_pd %>
+  </div>
+  <div class="field">
+    <%= f.label :rf_variation %><br>
+    <%= f.number_field :rf_variation %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,1 @@
+json.array! @si_physicaldevlamp_si_physicaldevgateways, partial: 'si_physicaldevlamp_si_physicaldevgateways/si_physicaldevlamp_si_physicaldevgateway', as: :si_physicaldevlamp_si_physicaldevgateway

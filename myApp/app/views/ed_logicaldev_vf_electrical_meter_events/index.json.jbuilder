@@ -1,0 +1,1 @@
+json.array! @ed_logicaldev_vf_electrical_meter_events, partial: 'ed_logicaldev_vf_electrical_meter_events/ed_logicaldev_vf_electrical_meter_event', as: :ed_logicaldev_vf_electrical_meter_event

@@ -1,0 +1,33 @@
+<%= form_for(@si_panel_circuit_relay) do |f| %>
+  <% if @si_panel_circuit_relay.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@si_panel_circuit_relay.errors.count, "error") %> prohibited this si_panel_circuit_relay from being saved:</h2>
+
+      <ul>
+      <% @si_panel_circuit_relay.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :si_physicaldevpanel_id %><br>
+    <%= f.text_field :si_physicaldevpanel_id %>
+  </div>
+  <div class="field">
+    <%= f.label :si_physicaldevcircuit_id %><br>
+    <%= f.text_field :si_physicaldevcircuit_id %>
+  </div>
+  <div class="field">
+    <%= f.label :relay %><br>
+    <%= f.text_area :relay %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.number_field :status %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

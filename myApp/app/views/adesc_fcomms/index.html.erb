@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Adesc Fcomms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>V storagetype</th>
+      <th>Unit</th>
+      <th>Minvalue</th>
+      <th>Maxvalue</th>
+      <th>Regex</th>
+      <th>Enumeration</th>
+      <th>Read only</th>
+      <th>Maxinstances</th>
+      <th>Descr</th>
+      <th>Lightcommand</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @adesc_fcomms.each do |adesc_fcomm| %>
+      <tr>
+        <td><%= adesc_fcomm.name %></td>
+        <td><%= adesc_fcomm.v_storagetype %></td>
+        <td><%= adesc_fcomm.unit %></td>
+        <td><%= adesc_fcomm.minvalue %></td>
+        <td><%= adesc_fcomm.maxvalue %></td>
+        <td><%= adesc_fcomm.regex %></td>
+        <td><%= adesc_fcomm.enumeration %></td>
+        <td><%= adesc_fcomm.read_only %></td>
+        <td><%= adesc_fcomm.maxinstances %></td>
+        <td><%= adesc_fcomm.descr %></td>
+        <td><%= adesc_fcomm.lightcommand %></td>
+        <td><%= link_to 'Show', adesc_fcomm %></td>
+        <td><%= link_to 'Edit', edit_adesc_fcomm_path(adesc_fcomm) %></td>
+        <td><%= link_to 'Destroy', adesc_fcomm, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Adesc fcomm', new_adesc_fcomm_path %>

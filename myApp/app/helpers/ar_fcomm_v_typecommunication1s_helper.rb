@@ -1,0 +1,2 @@
+module ArFcommVTypecommunication1sHelper
+end

@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing V Stateregulators</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @v_stateregulators.each do |v_stateregulator| %>
+      <tr>
+        <td><%= v_stateregulator.name %></td>
+        <td><%= link_to 'Show', v_stateregulator %></td>
+        <td><%= link_to 'Edit', edit_v_stateregulator_path(v_stateregulator) %></td>
+        <td><%= link_to 'Destroy', v_stateregulator, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New V stateregulator', new_v_stateregulator_path %>

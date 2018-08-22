@@ -1,0 +1,1 @@
+json.array! @ed_logicaldev_vs_light_control_events, partial: 'ed_logicaldev_vs_light_control_events/ed_logicaldev_vs_light_control_event', as: :ed_logicaldev_vs_light_control_event

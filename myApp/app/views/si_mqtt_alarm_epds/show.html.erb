@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Logical address:</strong>
+  <%= @si_mqtt_alarm_epd.logical_address %>
+</p>
+
+<p>
+  <strong>Si mqtt type alarm epd:</strong>
+  <%= @si_mqtt_alarm_epd.si_mqtt_type_alarm_epd %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @si_mqtt_alarm_epd.value %>
+</p>
+
+<p>
+  <strong>Time stamp:</strong>
+  <%= @si_mqtt_alarm_epd.time_stamp %>
+</p>
+
+<%= link_to 'Edit', edit_si_mqtt_alarm_epd_path(@si_mqtt_alarm_epd) %> |
+<%= link_to 'Back', si_mqtt_alarm_epds_path %>

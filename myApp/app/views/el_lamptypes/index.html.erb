@@ -1,0 +1,75 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing El Lamptypes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Wattage</th>
+      <th>V controltype</th>
+      <th>Control volmax</th>
+      <th>Control volmin</th>
+      <th>Min lightoutput</th>
+      <th>Virtual lightoutput</th>
+      <th>Dali ledlinear</th>
+      <th>Warmup time</th>
+      <th>Cooldown time</th>
+      <th>Low currentthreshold</th>
+      <th>High currentthreshold</th>
+      <th>Low lampvoltagethreshold</th>
+      <th>High lampvoltagethreshold</th>
+      <th>Max operationghours</th>
+      <th>Powerlightgradient</th>
+      <th>Lamppowertolerance</th>
+      <th>Lamppowerhighthreshold</th>
+      <th>Lamppowerlowthreshold</th>
+      <th>Powerfactorthreshold</th>
+      <th>Lumendrepreciationcurve</th>
+      <th>V clotype</th>
+      <th>Seqbridge</th>
+      <th>Seqcms</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @el_lamptypes.each do |el_lamptype| %>
+      <tr>
+        <td><%= el_lamptype.name %></td>
+        <td><%= el_lamptype.address %></td>
+        <td><%= el_lamptype.wattage %></td>
+        <td><%= el_lamptype.v_controltype %></td>
+        <td><%= el_lamptype.control_volmax %></td>
+        <td><%= el_lamptype.control_volmin %></td>
+        <td><%= el_lamptype.min_lightoutput %></td>
+        <td><%= el_lamptype.virtual_lightoutput %></td>
+        <td><%= el_lamptype.dali_ledlinear %></td>
+        <td><%= el_lamptype.warmup_time %></td>
+        <td><%= el_lamptype.cooldown_time %></td>
+        <td><%= el_lamptype.low_currentthreshold %></td>
+        <td><%= el_lamptype.high_currentthreshold %></td>
+        <td><%= el_lamptype.low_lampvoltagethreshold %></td>
+        <td><%= el_lamptype.high_lampvoltagethreshold %></td>
+        <td><%= el_lamptype.max_operationghours %></td>
+        <td><%= el_lamptype.powerlightgradient %></td>
+        <td><%= el_lamptype.lamppowertolerance %></td>
+        <td><%= el_lamptype.lamppowerhighthreshold %></td>
+        <td><%= el_lamptype.lamppowerlowthreshold %></td>
+        <td><%= el_lamptype.powerfactorthreshold %></td>
+        <td><%= el_lamptype.lumendrepreciationcurve %></td>
+        <td><%= el_lamptype.v_clotype %></td>
+        <td><%= el_lamptype.seqbridge %></td>
+        <td><%= el_lamptype.seqcms %></td>
+        <td><%= link_to 'Show', el_lamptype %></td>
+        <td><%= link_to 'Edit', edit_el_lamptype_path(el_lamptype) %></td>
+        <td><%= link_to 'Destroy', el_lamptype, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New El lamptype', new_el_lamptype_path %>

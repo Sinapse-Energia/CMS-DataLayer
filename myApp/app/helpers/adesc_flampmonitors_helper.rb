@@ -1,0 +1,2 @@
+module AdescFlampmonitorsHelper
+end

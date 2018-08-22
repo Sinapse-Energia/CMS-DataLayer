@@ -1,0 +1,2 @@
+json.extract! si_physicaldevlamp, :id, :name, :cod_ident, :location, :longitude, :latitude, :altitude, :date_installation, :number_lamp, :lamp_power, :v_typelight_id, :v_typelamppost_id, :v_typephysicalsupport_id, :si_physicaldevcircuit_id, :date_data, :name_vial, :lamppost_brand, :lamppost_model, :typelight_brand, :typelight_model, :typelight_power, :lifetime, :created_at, :updated_at
+json.url si_physicaldevlamp_url(si_physicaldevlamp, format: :json)

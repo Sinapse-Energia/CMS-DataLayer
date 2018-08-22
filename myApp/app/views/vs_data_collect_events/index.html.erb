@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Vs Data Collect Events</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vs_data_collect_events.each do |vs_data_collect_event| %>
+      <tr>
+        <td><%= vs_data_collect_event.name %></td>
+        <td><%= link_to 'Show', vs_data_collect_event %></td>
+        <td><%= link_to 'Edit', edit_vs_data_collect_event_path(vs_data_collect_event) %></td>
+        <td><%= link_to 'Destroy', vs_data_collect_event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Vs data collect event', new_vs_data_collect_event_path %>

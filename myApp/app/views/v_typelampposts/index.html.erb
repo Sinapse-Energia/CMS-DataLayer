@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing V Typelampposts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Short name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @v_typelampposts.each do |v_typelamppost| %>
+      <tr>
+        <td><%= v_typelamppost.name %></td>
+        <td><%= v_typelamppost.short_name %></td>
+        <td><%= link_to 'Show', v_typelamppost %></td>
+        <td><%= link_to 'Edit', edit_v_typelamppost_path(v_typelamppost) %></td>
+        <td><%= link_to 'Destroy', v_typelamppost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New V typelamppost', new_v_typelamppost_path %>

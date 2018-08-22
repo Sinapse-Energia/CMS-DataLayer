@@ -1,0 +1,25 @@
+<%= form_for(@eg_groups_lamp_ed_logicaldev) do |f| %>
+  <% if @eg_groups_lamp_ed_logicaldev.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@eg_groups_lamp_ed_logicaldev.errors.count, "error") %> prohibited this eg_groups_lamp_ed_logicaldev from being saved:</h2>
+
+      <ul>
+      <% @eg_groups_lamp_ed_logicaldev.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :eg_group_id %><br>
+    <%= f.text_field :eg_group_id %>
+  </div>
+  <div class="field">
+    <%= f.label :ed_logicaldev_id %><br>
+    <%= f.text_field :ed_logicaldev_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

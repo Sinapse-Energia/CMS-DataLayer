@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  value: MyText
+  seqbridge: 1
+  seqcms: 1
+  adesc_fcomm_id: 
+  f_communication_id: 
+
+two:
+  value: MyText
+  seqbridge: 1
+  seqcms: 1
+  adesc_fcomm_id: 
+  f_communication_id: 

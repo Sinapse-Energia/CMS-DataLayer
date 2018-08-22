@@ -1,0 +1,1 @@
+json.array! @ed_logicaldev_vf_communication_events, partial: 'ed_logicaldev_vf_communication_events/ed_logicaldev_vf_communication_event', as: :ed_logicaldev_vf_communication_event

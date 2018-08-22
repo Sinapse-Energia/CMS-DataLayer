@@ -1,0 +1,1 @@
+json.partial! "ed_logicaldev_vf_communication_events/ed_logicaldev_vf_communication_event", ed_logicaldev_vf_communication_event: @ed_logicaldev_vf_communication_event

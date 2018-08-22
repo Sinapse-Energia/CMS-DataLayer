@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @c_calendarrule.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @c_calendarrule.end_date %>
+</p>
+
+<p>
+  <strong>Ep controlprogram:</strong>
+  <%= @c_calendarrule.ep_controlprogram %>
+</p>
+
+<p>
+  <strong>Ec calendar:</strong>
+  <%= @c_calendarrule.ec_calendar %>
+</p>
+
+<p>
+  <strong>Always:</strong>
+  <%= @c_calendarrule.always %>
+</p>
+
+<%= link_to 'Edit', edit_c_calendarrule_path(@c_calendarrule) %> |
+<%= link_to 'Back', c_calendarrules_path %>

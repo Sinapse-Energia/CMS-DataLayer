@@ -1,0 +1,2 @@
+json.extract! el_lamptype, :id, :name, :address, :wattage, :v_controltype_id, :control_volmax, :control_volmin, :min_lightoutput, :virtual_lightoutput, :dali_ledlinear, :warmup_time, :cooldown_time, :low_currentthreshold, :high_currentthreshold, :low_lampvoltagethreshold, :high_lampvoltagethreshold, :max_operationghours, :powerlightgradient, :lamppowertolerance, :lamppowerhighthreshold, :lamppowerlowthreshold, :powerfactorthreshold, :lumendrepreciationcurve, :v_clotype_id, :seqbridge, :seqcms, :created_at, :updated_at
+json.url el_lamptype_url(el_lamptype, format: :json)

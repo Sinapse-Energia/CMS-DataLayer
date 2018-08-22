@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  f_lampactuator_id: 
+  es_scene_id: 
+
+two:
+  f_lampactuator_id: 
+  es_scene_id: 

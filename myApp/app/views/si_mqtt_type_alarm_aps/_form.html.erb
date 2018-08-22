@@ -1,0 +1,25 @@
+<%= form_for(@si_mqtt_type_alarm_ap) do |f| %>
+  <% if @si_mqtt_type_alarm_ap.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@si_mqtt_type_alarm_ap.errors.count, "error") %> prohibited this si_mqtt_type_alarm_ap from being saved:</h2>
+
+      <ul>
+      <% @si_mqtt_type_alarm_ap.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :type_a %><br>
+    <%= f.text_area :type_a %>
+  </div>
+  <div class="field">
+    <%= f.label :subtype_a %><br>
+    <%= f.text_area :subtype_a %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

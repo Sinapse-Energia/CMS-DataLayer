@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing V Typephysicalsupports</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Short name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @v_typephysicalsupports.each do |v_typephysicalsupport| %>
+      <tr>
+        <td><%= v_typephysicalsupport.name %></td>
+        <td><%= v_typephysicalsupport.short_name %></td>
+        <td><%= link_to 'Show', v_typephysicalsupport %></td>
+        <td><%= link_to 'Edit', edit_v_typephysicalsupport_path(v_typephysicalsupport) %></td>
+        <td><%= link_to 'Destroy', v_typephysicalsupport, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New V typephysicalsupport', new_v_typephysicalsupport_path %>

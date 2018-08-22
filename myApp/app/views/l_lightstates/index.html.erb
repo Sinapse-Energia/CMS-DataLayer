@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing L Lightstates</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Level</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @l_lightstates.each do |l_lightstate| %>
+      <tr>
+        <td><%= l_lightstate.level %></td>
+        <td><%= l_lightstate.description %></td>
+        <td><%= link_to 'Show', l_lightstate %></td>
+        <td><%= link_to 'Edit', edit_l_lightstate_path(l_lightstate) %></td>
+        <td><%= link_to 'Destroy', l_lightstate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New L lightstate', new_l_lightstate_path %>

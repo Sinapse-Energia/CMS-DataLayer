@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Ec Calendars</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Address</th>
+      <th>Ep controlprogram</th>
+      <th>Seqbridge</th>
+      <th>Seqcms</th>
+      <th>Actived</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ec_calendars.each do |ec_calendar| %>
+      <tr>
+        <td><%= ec_calendar.address %></td>
+        <td><%= ec_calendar.ep_controlprogram %></td>
+        <td><%= ec_calendar.seqbridge %></td>
+        <td><%= ec_calendar.seqcms %></td>
+        <td><%= ec_calendar.actived %></td>
+        <td><%= link_to 'Show', ec_calendar %></td>
+        <td><%= link_to 'Edit', edit_ec_calendar_path(ec_calendar) %></td>
+        <td><%= link_to 'Destroy', ec_calendar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ec calendar', new_ec_calendar_path %>

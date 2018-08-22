@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Ed Logicaldev Eg Groups</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ed logicaldev</th>
+      <th>Eg group</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ed_logicaldev_eg_groups.each do |ed_logicaldev_eg_group| %>
+      <tr>
+        <td><%= ed_logicaldev_eg_group.ed_logicaldev %></td>
+        <td><%= ed_logicaldev_eg_group.eg_group %></td>
+        <td><%= link_to 'Show', ed_logicaldev_eg_group %></td>
+        <td><%= link_to 'Edit', edit_ed_logicaldev_eg_group_path(ed_logicaldev_eg_group) %></td>
+        <td><%= link_to 'Destroy', ed_logicaldev_eg_group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ed logicaldev eg group', new_ed_logicaldev_eg_group_path %>

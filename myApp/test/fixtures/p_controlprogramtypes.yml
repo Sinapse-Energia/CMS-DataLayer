@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ep_controlprogram_id: 
+  v_typeactiveperiod_id: 
+
+two:
+  ep_controlprogram_id: 
+  v_typeactiveperiod_id: 

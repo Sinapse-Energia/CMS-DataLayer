@@ -1,0 +1,25 @@
+<%= form_for(@ed_logicaldev_vf_basic_event) do |f| %>
+  <% if @ed_logicaldev_vf_basic_event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ed_logicaldev_vf_basic_event.errors.count, "error") %> prohibited this ed_logicaldev_vf_basic_event from being saved:</h2>
+
+      <ul>
+      <% @ed_logicaldev_vf_basic_event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ed_logicaldev_id %><br>
+    <%= f.text_field :ed_logicaldev_id %>
+  </div>
+  <div class="field">
+    <%= f.label :v_f_basic_event_id %><br>
+    <%= f.text_field :v_f_basic_event_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

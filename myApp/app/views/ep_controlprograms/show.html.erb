@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @ep_controlprogram.name %>
+</p>
+
+<p>
+  <strong>Seqbridge:</strong>
+  <%= @ep_controlprogram.seqbridge %>
+</p>
+
+<p>
+  <strong>Seqcms:</strong>
+  <%= @ep_controlprogram.seqcms %>
+</p>
+
+<%= link_to 'Edit', edit_ep_controlprogram_path(@ep_controlprogram) %> |
+<%= link_to 'Back', ep_controlprograms_path %>

@@ -1,0 +1,1 @@
+json.partial! "ed_logicaldev_vs_data_pkg_transfer_events/ed_logicaldev_vs_data_pkg_transfer_event", ed_logicaldev_vs_data_pkg_transfer_event: @ed_logicaldev_vs_data_pkg_transfer_event

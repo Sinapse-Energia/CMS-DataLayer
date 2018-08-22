@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing A Fbasics</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Seqbridge</th>
+      <th>Seqcms</th>
+      <th>Adesc fbasic</th>
+      <th>F basic</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @a_fbasics.each do |a_fbasic| %>
+      <tr>
+        <td><%= a_fbasic.value %></td>
+        <td><%= a_fbasic.seqbridge %></td>
+        <td><%= a_fbasic.seqcms %></td>
+        <td><%= a_fbasic.adesc_fbasic %></td>
+        <td><%= a_fbasic.f_basic %></td>
+        <td><%= link_to 'Show', a_fbasic %></td>
+        <td><%= link_to 'Edit', edit_a_fbasic_path(a_fbasic) %></td>
+        <td><%= link_to 'Destroy', a_fbasic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New A fbasic', new_a_fbasic_path %>

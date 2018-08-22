@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  set: 1
+  v_dynamicoperation_id: 
+
+two:
+  set: 1
+  v_dynamicoperation_id: 

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing A Flampmonitor Hists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ed logicaldev</th>
+      <th>Adesc flampmonitor</th>
+      <th>Value</th>
+      <th>Time stamp</th>
+      <th>Type count</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @a_flampmonitor_hists.each do |a_flampmonitor_hist| %>
+      <tr>
+        <td><%= a_flampmonitor_hist.ed_logicaldev %></td>
+        <td><%= a_flampmonitor_hist.adesc_flampmonitor %></td>
+        <td><%= a_flampmonitor_hist.value %></td>
+        <td><%= a_flampmonitor_hist.time_stamp %></td>
+        <td><%= a_flampmonitor_hist.type_count %></td>
+        <td><%= link_to 'Show', a_flampmonitor_hist %></td>
+        <td><%= link_to 'Edit', edit_a_flampmonitor_hist_path(a_flampmonitor_hist) %></td>
+        <td><%= link_to 'Destroy', a_flampmonitor_hist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New A flampmonitor hist', new_a_flampmonitor_hist_path %>

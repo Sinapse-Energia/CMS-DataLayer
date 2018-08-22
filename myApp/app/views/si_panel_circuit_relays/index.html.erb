@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Si Panel Circuit Relays</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Si physicaldevpanel</th>
+      <th>Si physicaldevcircuit</th>
+      <th>Relay</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @si_panel_circuit_relays.each do |si_panel_circuit_relay| %>
+      <tr>
+        <td><%= si_panel_circuit_relay.si_physicaldevpanel %></td>
+        <td><%= si_panel_circuit_relay.si_physicaldevcircuit %></td>
+        <td><%= si_panel_circuit_relay.relay %></td>
+        <td><%= si_panel_circuit_relay.status %></td>
+        <td><%= link_to 'Show', si_panel_circuit_relay %></td>
+        <td><%= link_to 'Edit', edit_si_panel_circuit_relay_path(si_panel_circuit_relay) %></td>
+        <td><%= link_to 'Destroy', si_panel_circuit_relay, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Si panel circuit relay', new_si_panel_circuit_relay_path %>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_regulator: MyText
+  brand_regulator: MyText
+  power_regulator: MyText
+  v_typeregulator_id: 
+  v_stateregulator_id: 
+  energy_loss: MyText
+
+two:
+  id_regulator: MyText
+  brand_regulator: MyText
+  power_regulator: MyText
+  v_typeregulator_id: 
+  v_stateregulator_id: 
+  energy_loss: MyText

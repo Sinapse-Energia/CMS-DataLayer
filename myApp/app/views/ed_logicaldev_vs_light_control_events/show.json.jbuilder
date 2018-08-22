@@ -1,0 +1,1 @@
+json.partial! "ed_logicaldev_vs_light_control_events/ed_logicaldev_vs_light_control_event", ed_logicaldev_vs_light_control_event: @ed_logicaldev_vs_light_control_event

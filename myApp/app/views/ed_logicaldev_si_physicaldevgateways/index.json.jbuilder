@@ -1,0 +1,1 @@
+json.array! @ed_logicaldev_si_physicaldevgateways, partial: 'ed_logicaldev_si_physicaldevgateways/ed_logicaldev_si_physicaldevgateway', as: :ed_logicaldev_si_physicaldevgateway

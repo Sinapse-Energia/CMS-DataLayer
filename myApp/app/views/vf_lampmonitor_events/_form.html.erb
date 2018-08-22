@@ -1,0 +1,21 @@
+<%= form_for(@vf_lampmonitor_event) do |f| %>
+  <% if @vf_lampmonitor_event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@vf_lampmonitor_event.errors.count, "error") %> prohibited this vf_lampmonitor_event from being saved:</h2>
+
+      <ul>
+      <% @vf_lampmonitor_event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_area :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

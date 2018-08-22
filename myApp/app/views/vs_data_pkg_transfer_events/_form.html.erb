@@ -1,0 +1,21 @@
+<%= form_for(@vs_data_pkg_transfer_event) do |f| %>
+  <% if @vs_data_pkg_transfer_event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@vs_data_pkg_transfer_event.errors.count, "error") %> prohibited this vs_data_pkg_transfer_event from being saved:</h2>
+
+      <ul>
+      <% @vs_data_pkg_transfer_event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_area :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+module EdClasslogicaldevsHelper
+end

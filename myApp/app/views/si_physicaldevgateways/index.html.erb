@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Si Physicaldevgateways</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Name vial</th>
+      <th>Number vial</th>
+      <th>Longitude</th>
+      <th>Latitude</th>
+      <th>Altitude</th>
+      <th>Date installation</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @si_physicaldevgateways.each do |si_physicaldevgateway| %>
+      <tr>
+        <td><%= si_physicaldevgateway.name %></td>
+        <td><%= si_physicaldevgateway.name_vial %></td>
+        <td><%= si_physicaldevgateway.number_vial %></td>
+        <td><%= si_physicaldevgateway.longitude %></td>
+        <td><%= si_physicaldevgateway.latitude %></td>
+        <td><%= si_physicaldevgateway.altitude %></td>
+        <td><%= si_physicaldevgateway.date_installation %></td>
+        <td><%= link_to 'Show', si_physicaldevgateway %></td>
+        <td><%= link_to 'Edit', edit_si_physicaldevgateway_path(si_physicaldevgateway) %></td>
+        <td><%= link_to 'Destroy', si_physicaldevgateway, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Si physicaldevgateway', new_si_physicaldevgateway_path %>

@@ -1,0 +1,2 @@
+module VTypecommunicationsHelper
+end

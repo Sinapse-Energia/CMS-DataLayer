@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  si_alarm_panel_id: 
+  ed_logicaldev_id: 
+  is_group: false
+  is_single: false
+  eg_group_id: 
+
+two:
+  si_alarm_panel_id: 
+  ed_logicaldev_id: 
+  is_group: false
+  is_single: false
+  eg_group_id: 

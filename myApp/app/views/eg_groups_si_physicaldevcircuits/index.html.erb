@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Eg Groups Si Physicaldevcircuits</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Eg group</th>
+      <th>Si physicaldevcircuit</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @eg_groups_si_physicaldevcircuits.each do |eg_groups_si_physicaldevcircuit| %>
+      <tr>
+        <td><%= eg_groups_si_physicaldevcircuit.eg_group %></td>
+        <td><%= eg_groups_si_physicaldevcircuit.si_physicaldevcircuit %></td>
+        <td><%= link_to 'Show', eg_groups_si_physicaldevcircuit %></td>
+        <td><%= link_to 'Edit', edit_eg_groups_si_physicaldevcircuit_path(eg_groups_si_physicaldevcircuit) %></td>
+        <td><%= link_to 'Destroy', eg_groups_si_physicaldevcircuit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Eg groups si physicaldevcircuit', new_eg_groups_si_physicaldevcircuit_path %>

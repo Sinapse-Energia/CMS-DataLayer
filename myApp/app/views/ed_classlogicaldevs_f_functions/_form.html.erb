@@ -1,0 +1,25 @@
+<%= form_for(@ed_classlogicaldevs_f_function) do |f| %>
+  <% if @ed_classlogicaldevs_f_function.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ed_classlogicaldevs_f_function.errors.count, "error") %> prohibited this ed_classlogicaldevs_f_function from being saved:</h2>
+
+      <ul>
+      <% @ed_classlogicaldevs_f_function.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ed_classlogicaldev_id %><br>
+    <%= f.text_field :ed_classlogicaldev_id %>
+  </div>
+  <div class="field">
+    <%= f.label :f_function_id %><br>
+    <%= f.text_field :f_function_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

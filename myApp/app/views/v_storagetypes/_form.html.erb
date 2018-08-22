@@ -1,0 +1,21 @@
+<%= form_for(@v_storagetype) do |f| %>
+  <% if @v_storagetype.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@v_storagetype.errors.count, "error") %> prohibited this v_storagetype from being saved:</h2>
+
+      <ul>
+      <% @v_storagetype.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_area :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

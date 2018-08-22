@@ -1,0 +1,1 @@
+json.partial! "ed_logicaldev_vf_photocell_events/ed_logicaldev_vf_photocell_event", ed_logicaldev_vf_photocell_event: @ed_logicaldev_vf_photocell_event

@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Si Regulators</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id regulator</th>
+      <th>Brand regulator</th>
+      <th>Power regulator</th>
+      <th>V typeregulator</th>
+      <th>V stateregulator</th>
+      <th>Energy loss</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @si_regulators.each do |si_regulator| %>
+      <tr>
+        <td><%= si_regulator.id_regulator %></td>
+        <td><%= si_regulator.brand_regulator %></td>
+        <td><%= si_regulator.power_regulator %></td>
+        <td><%= si_regulator.v_typeregulator %></td>
+        <td><%= si_regulator.v_stateregulator %></td>
+        <td><%= si_regulator.energy_loss %></td>
+        <td><%= link_to 'Show', si_regulator %></td>
+        <td><%= link_to 'Edit', edit_si_regulator_path(si_regulator) %></td>
+        <td><%= link_to 'Destroy', si_regulator, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Si regulator', new_si_regulator_path %>

@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ed_logicaldev_id: 
+  historical_valid: 1
+  historical_not_valid: 1
+  last_day_valid: 1
+  last_day_not_valid: 1
+  last_x_valid: 1
+  last_x_not_valid: 1
+  status: 1
+  repeater: false
+  previous_last_day_valid: 1
+  previous_last_day_not_valid: 1
+  lamp_status: 1
+  alert_status: false
+  rf_coverage: 1
+  rf_valid: 1
+  rf_not_valid: 1
+  rf_coverage_pd: 1
+  rf_valid_pd: 1
+  rf_not_valid_pd: 1
+  rf_variation: 1
+
+two:
+  ed_logicaldev_id: 
+  historical_valid: 1
+  historical_not_valid: 1
+  last_day_valid: 1
+  last_day_not_valid: 1
+  last_x_valid: 1
+  last_x_not_valid: 1
+  status: 1
+  repeater: false
+  previous_last_day_valid: 1
+  previous_last_day_not_valid: 1
+  lamp_status: 1
+  alert_status: false
+  rf_coverage: 1
+  rf_valid: 1
+  rf_not_valid: 1
+  rf_coverage_pd: 1
+  rf_valid_pd: 1
+  rf_not_valid_pd: 1
+  rf_variation: 1

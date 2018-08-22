@@ -1,0 +1,61 @@
+<%= form_for(@adesc_flampmonitor) do |f| %>
+  <% if @adesc_flampmonitor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@adesc_flampmonitor.errors.count, "error") %> prohibited this adesc_flampmonitor from being saved:</h2>
+
+      <ul>
+      <% @adesc_flampmonitor.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_area :name %>
+  </div>
+  <div class="field">
+    <%= f.label :v_storagetype_id %><br>
+    <%= f.text_field :v_storagetype_id %>
+  </div>
+  <div class="field">
+    <%= f.label :unit %><br>
+    <%= f.text_area :unit %>
+  </div>
+  <div class="field">
+    <%= f.label :minvalue %><br>
+    <%= f.text_area :minvalue %>
+  </div>
+  <div class="field">
+    <%= f.label :maxvalue %><br>
+    <%= f.text_area :maxvalue %>
+  </div>
+  <div class="field">
+    <%= f.label :regex %><br>
+    <%= f.text_area :regex %>
+  </div>
+  <div class="field">
+    <%= f.label :enumeration %><br>
+    <%= f.text_area :enumeration %>
+  </div>
+  <div class="field">
+    <%= f.label :read_only %><br>
+    <%= f.check_box :read_only %>
+  </div>
+  <div class="field">
+    <%= f.label :maxinstances %><br>
+    <%= f.number_field :maxinstances %>
+  </div>
+  <div class="field">
+    <%= f.label :descr %><br>
+    <%= f.text_area :descr %>
+  </div>
+  <div class="field">
+    <%= f.label :lightcommand %><br>
+    <%= f.text_area :lightcommand %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

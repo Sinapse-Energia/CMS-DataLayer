@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  address: MyText
+  ep_controlprogram_id: 
+  seqbridge: 1
+  seqcms: 1
+  actived: false
+
+two:
+  address: MyText
+  ep_controlprogram_id: 
+  seqbridge: 1
+  seqcms: 1
+  actived: false

@@ -1,0 +1,25 @@
+<%= form_for(@v_type_alarm_panel) do |f| %>
+  <% if @v_type_alarm_panel.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@v_type_alarm_panel.errors.count, "error") %> prohibited this v_type_alarm_panel from being saved:</h2>
+
+      <ul>
+      <% @v_type_alarm_panel.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_area :name %>
+  </div>
+  <div class="field">
+    <%= f.label :magnitude %><br>
+    <%= f.text_area :magnitude %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

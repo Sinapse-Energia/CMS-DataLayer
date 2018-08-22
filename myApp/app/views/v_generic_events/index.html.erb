@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing V Generic Events</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @v_generic_events.each do |v_generic_event| %>
+      <tr>
+        <td><%= v_generic_event.name %></td>
+        <td><%= link_to 'Show', v_generic_event %></td>
+        <td><%= link_to 'Edit', edit_v_generic_event_path(v_generic_event) %></td>
+        <td><%= link_to 'Destroy', v_generic_event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New V generic event', new_v_generic_event_path %>

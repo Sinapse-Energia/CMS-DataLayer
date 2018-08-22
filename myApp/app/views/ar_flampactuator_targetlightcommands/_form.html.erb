@@ -1,0 +1,25 @@
+<%= form_for(@ar_flampactuator_targetlightcommand) do |f| %>
+  <% if @ar_flampactuator_targetlightcommand.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ar_flampactuator_targetlightcommand.errors.count, "error") %> prohibited this ar_flampactuator_targetlightcommand from being saved:</h2>
+
+      <ul>
+      <% @ar_flampactuator_targetlightcommand.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :f_lampactuator_id %><br>
+    <%= f.text_field :f_lampactuator_id %>
+  </div>
+  <div class="field">
+    <%= f.label :l_lightcommand_id %><br>
+    <%= f.text_field :l_lightcommand_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

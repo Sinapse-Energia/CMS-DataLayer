@@ -1,0 +1,105 @@
+<%= form_for(@si_physicaldevpanel) do |f| %>
+  <% if @si_physicaldevpanel.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@si_physicaldevpanel.errors.count, "error") %> prohibited this si_physicaldevpanel from being saved:</h2>
+
+      <ul>
+      <% @si_physicaldevpanel.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_area :name %>
+  </div>
+  <div class="field">
+    <%= f.label :cod_ident %><br>
+    <%= f.text_area :cod_ident %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br>
+    <%= f.text_area :location %>
+  </div>
+  <div class="field">
+    <%= f.label :longitude %><br>
+    <%= f.text_field :longitude %>
+  </div>
+  <div class="field">
+    <%= f.label :latitude %><br>
+    <%= f.text_field :latitude %>
+  </div>
+  <div class="field">
+    <%= f.label :altitude %><br>
+    <%= f.text_field :altitude %>
+  </div>
+  <div class="field">
+    <%= f.label :date_installation %><br>
+    <%= f.datetime_select :date_installation %>
+  </div>
+  <div class="field">
+    <%= f.label :date_data %><br>
+    <%= f.datetime_select :date_data %>
+  </div>
+  <div class="field">
+    <%= f.label :cod_module %><br>
+    <%= f.text_area :cod_module %>
+  </div>
+  <div class="field">
+    <%= f.label :name_vial %><br>
+    <%= f.text_area :name_vial %>
+  </div>
+  <div class="field">
+    <%= f.label :number_vial %><br>
+    <%= f.text_area :number_vial %>
+  </div>
+  <div class="field">
+    <%= f.label :power_installed %><br>
+    <%= f.text_area :power_installed %>
+  </div>
+  <div class="field">
+    <%= f.label :power_contracted %><br>
+    <%= f.text_area :power_contracted %>
+  </div>
+  <div class="field">
+    <%= f.label :switch_general %><br>
+    <%= f.text_area :switch_general %>
+  </div>
+  <div class="field">
+    <%= f.label :protection_mag %><br>
+    <%= f.text_area :protection_mag %>
+  </div>
+  <div class="field">
+    <%= f.label :protection_diff %><br>
+    <%= f.text_area :protection_diff %>
+  </div>
+  <div class="field">
+    <%= f.label :number_supply %><br>
+    <%= f.text_area :number_supply %>
+  </div>
+  <div class="field">
+    <%= f.label :number_countpower %><br>
+    <%= f.text_area :number_countpower %>
+  </div>
+  <div class="field">
+    <%= f.label :clock_brand %><br>
+    <%= f.text_area :clock_brand %>
+  </div>
+  <div class="field">
+    <%= f.label :clock_model %><br>
+    <%= f.text_area :clock_model %>
+  </div>
+  <div class="field">
+    <%= f.label :number_circuit %><br>
+    <%= f.text_area :number_circuit %>
+  </div>
+  <div class="field">
+    <%= f.label :v_typecommand_id %><br>
+    <%= f.text_field :v_typecommand_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing V Type Alarm Lamps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @v_type_alarm_lamps.each do |v_type_alarm_lamp| %>
+      <tr>
+        <td><%= v_type_alarm_lamp.name %></td>
+        <td><%= link_to 'Show', v_type_alarm_lamp %></td>
+        <td><%= link_to 'Edit', edit_v_type_alarm_lamp_path(v_type_alarm_lamp) %></td>
+        <td><%= link_to 'Destroy', v_type_alarm_lamp, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New V type alarm lamp', new_v_type_alarm_lamp_path %>

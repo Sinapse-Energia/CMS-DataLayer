@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Threshold:</strong>
+  <%= @si_alarm_lamp.threshold %>
+</p>
+
+<p>
+  <strong>Num repeat:</strong>
+  <%= @si_alarm_lamp.num_repeat %>
+</p>
+
+<p>
+  <strong>Notif email:</strong>
+  <%= @si_alarm_lamp.notif_email %>
+</p>
+
+<p>
+  <strong>Ids lista email:</strong>
+  <%= @si_alarm_lamp.ids_lista_email %>
+</p>
+
+<p>
+  <strong>Notif sms:</strong>
+  <%= @si_alarm_lamp.notif_sms %>
+</p>
+
+<p>
+  <strong>Ids list sms:</strong>
+  <%= @si_alarm_lamp.ids_list_sms %>
+</p>
+
+<p>
+  <strong>V type alarm lamp:</strong>
+  <%= @si_alarm_lamp.v_type_alarm_lamp %>
+</p>
+
+<p>
+  <strong>V threshold type:</strong>
+  <%= @si_alarm_lamp.v_threshold_type %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @si_alarm_lamp.name %>
+</p>
+
+<p>
+  <strong>Si mqtt type alarm epd:</strong>
+  <%= @si_alarm_lamp.si_mqtt_type_alarm_epd %>
+</p>
+
+<%= link_to 'Edit', edit_si_alarm_lamp_path(@si_alarm_lamp) %> |
+<%= link_to 'Back', si_alarm_lamps_path %>

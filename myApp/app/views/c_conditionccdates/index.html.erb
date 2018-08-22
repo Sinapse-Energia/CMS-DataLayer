@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing C Conditionccdates</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>C start</th>
+      <th>C end</th>
+      <th>C rulescondition</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @c_conditionccdates.each do |c_conditionccdate| %>
+      <tr>
+        <td><%= c_conditionccdate.c_start %></td>
+        <td><%= c_conditionccdate.c_end %></td>
+        <td><%= c_conditionccdate.c_rulescondition %></td>
+        <td><%= link_to 'Show', c_conditionccdate %></td>
+        <td><%= link_to 'Edit', edit_c_conditionccdate_path(c_conditionccdate) %></td>
+        <td><%= link_to 'Destroy', c_conditionccdate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New C conditionccdate', new_c_conditionccdate_path %>

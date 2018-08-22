@@ -1,0 +1,2 @@
+module VfPhotocellEventsHelper
+end

@@ -1,0 +1,101 @@
+<%= form_for(@si_physicaldevlamp) do |f| %>
+  <% if @si_physicaldevlamp.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@si_physicaldevlamp.errors.count, "error") %> prohibited this si_physicaldevlamp from being saved:</h2>
+
+      <ul>
+      <% @si_physicaldevlamp.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_area :name %>
+  </div>
+  <div class="field">
+    <%= f.label :cod_ident %><br>
+    <%= f.text_area :cod_ident %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br>
+    <%= f.text_area :location %>
+  </div>
+  <div class="field">
+    <%= f.label :longitude %><br>
+    <%= f.text_field :longitude %>
+  </div>
+  <div class="field">
+    <%= f.label :latitude %><br>
+    <%= f.text_field :latitude %>
+  </div>
+  <div class="field">
+    <%= f.label :altitude %><br>
+    <%= f.text_field :altitude %>
+  </div>
+  <div class="field">
+    <%= f.label :date_installation %><br>
+    <%= f.datetime_select :date_installation %>
+  </div>
+  <div class="field">
+    <%= f.label :number_lamp %><br>
+    <%= f.text_area :number_lamp %>
+  </div>
+  <div class="field">
+    <%= f.label :lamp_power %><br>
+    <%= f.text_area :lamp_power %>
+  </div>
+  <div class="field">
+    <%= f.label :v_typelight_id %><br>
+    <%= f.text_field :v_typelight_id %>
+  </div>
+  <div class="field">
+    <%= f.label :v_typelamppost_id %><br>
+    <%= f.text_field :v_typelamppost_id %>
+  </div>
+  <div class="field">
+    <%= f.label :v_typephysicalsupport_id %><br>
+    <%= f.text_field :v_typephysicalsupport_id %>
+  </div>
+  <div class="field">
+    <%= f.label :si_physicaldevcircuit_id %><br>
+    <%= f.text_field :si_physicaldevcircuit_id %>
+  </div>
+  <div class="field">
+    <%= f.label :date_data %><br>
+    <%= f.datetime_select :date_data %>
+  </div>
+  <div class="field">
+    <%= f.label :name_vial %><br>
+    <%= f.text_area :name_vial %>
+  </div>
+  <div class="field">
+    <%= f.label :lamppost_brand %><br>
+    <%= f.text_area :lamppost_brand %>
+  </div>
+  <div class="field">
+    <%= f.label :lamppost_model %><br>
+    <%= f.text_area :lamppost_model %>
+  </div>
+  <div class="field">
+    <%= f.label :typelight_brand %><br>
+    <%= f.text_area :typelight_brand %>
+  </div>
+  <div class="field">
+    <%= f.label :typelight_model %><br>
+    <%= f.text_area :typelight_model %>
+  </div>
+  <div class="field">
+    <%= f.label :typelight_power %><br>
+    <%= f.text_area :typelight_power %>
+  </div>
+  <div class="field">
+    <%= f.label :lifetime %><br>
+    <%= f.text_area :lifetime %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

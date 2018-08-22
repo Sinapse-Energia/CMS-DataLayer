@@ -1,0 +1,1 @@
+json.partial! "ed_logicaldev_v_generic_events/ed_logicaldev_v_generic_event", ed_logicaldev_v_generic_event: @ed_logicaldev_v_generic_event

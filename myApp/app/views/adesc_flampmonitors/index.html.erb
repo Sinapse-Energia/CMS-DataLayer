@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Adesc Flampmonitors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>V storagetype</th>
+      <th>Unit</th>
+      <th>Minvalue</th>
+      <th>Maxvalue</th>
+      <th>Regex</th>
+      <th>Enumeration</th>
+      <th>Read only</th>
+      <th>Maxinstances</th>
+      <th>Descr</th>
+      <th>Lightcommand</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @adesc_flampmonitors.each do |adesc_flampmonitor| %>
+      <tr>
+        <td><%= adesc_flampmonitor.name %></td>
+        <td><%= adesc_flampmonitor.v_storagetype %></td>
+        <td><%= adesc_flampmonitor.unit %></td>
+        <td><%= adesc_flampmonitor.minvalue %></td>
+        <td><%= adesc_flampmonitor.maxvalue %></td>
+        <td><%= adesc_flampmonitor.regex %></td>
+        <td><%= adesc_flampmonitor.enumeration %></td>
+        <td><%= adesc_flampmonitor.read_only %></td>
+        <td><%= adesc_flampmonitor.maxinstances %></td>
+        <td><%= adesc_flampmonitor.descr %></td>
+        <td><%= adesc_flampmonitor.lightcommand %></td>
+        <td><%= link_to 'Show', adesc_flampmonitor %></td>
+        <td><%= link_to 'Edit', edit_adesc_flampmonitor_path(adesc_flampmonitor) %></td>
+        <td><%= link_to 'Destroy', adesc_flampmonitor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Adesc flampmonitor', new_adesc_flampmonitor_path %>

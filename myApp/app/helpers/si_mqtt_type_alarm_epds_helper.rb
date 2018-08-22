@@ -1,0 +1,2 @@
+module SiMqttTypeAlarmEpdsHelper
+end

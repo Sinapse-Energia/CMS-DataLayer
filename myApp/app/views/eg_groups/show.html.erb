@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @eg_group.address %>
+</p>
+
+<p>
+  <strong>V purpose:</strong>
+  <%= @eg_group.v_purpose %>
+</p>
+
+<%= link_to 'Edit', edit_eg_group_path(@eg_group) %> |
+<%= link_to 'Back', eg_groups_path %>

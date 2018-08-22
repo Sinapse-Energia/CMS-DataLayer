@@ -1,0 +1,37 @@
+<%= form_for(@si_alarm_circuit_si_physicaldevcircuit) do |f| %>
+  <% if @si_alarm_circuit_si_physicaldevcircuit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@si_alarm_circuit_si_physicaldevcircuit.errors.count, "error") %> prohibited this si_alarm_circuit_si_physicaldevcircuit from being saved:</h2>
+
+      <ul>
+      <% @si_alarm_circuit_si_physicaldevcircuit.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :si_alarm_circuit_id %><br>
+    <%= f.text_field :si_alarm_circuit_id %>
+  </div>
+  <div class="field">
+    <%= f.label :si_physicaldevcircuit_id %><br>
+    <%= f.text_field :si_physicaldevcircuit_id %>
+  </div>
+  <div class="field">
+    <%= f.label :is_group %><br>
+    <%= f.check_box :is_group %>
+  </div>
+  <div class="field">
+    <%= f.label :is_single %><br>
+    <%= f.check_box :is_single %>
+  </div>
+  <div class="field">
+    <%= f.label :eg_group_id %><br>
+    <%= f.text_field :eg_group_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

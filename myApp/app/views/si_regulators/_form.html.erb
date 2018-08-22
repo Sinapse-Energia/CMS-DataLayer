@@ -1,0 +1,41 @@
+<%= form_for(@si_regulator) do |f| %>
+  <% if @si_regulator.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@si_regulator.errors.count, "error") %> prohibited this si_regulator from being saved:</h2>
+
+      <ul>
+      <% @si_regulator.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id_regulator %><br>
+    <%= f.text_area :id_regulator %>
+  </div>
+  <div class="field">
+    <%= f.label :brand_regulator %><br>
+    <%= f.text_area :brand_regulator %>
+  </div>
+  <div class="field">
+    <%= f.label :power_regulator %><br>
+    <%= f.text_area :power_regulator %>
+  </div>
+  <div class="field">
+    <%= f.label :v_typeregulator_id %><br>
+    <%= f.text_field :v_typeregulator_id %>
+  </div>
+  <div class="field">
+    <%= f.label :v_stateregulator_id %><br>
+    <%= f.text_field :v_stateregulator_id %>
+  </div>
+  <div class="field">
+    <%= f.label :energy_loss %><br>
+    <%= f.text_area :energy_loss %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

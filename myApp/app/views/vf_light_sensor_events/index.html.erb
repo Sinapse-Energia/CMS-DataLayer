@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Vf Light Sensor Events</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vf_light_sensor_events.each do |vf_light_sensor_event| %>
+      <tr>
+        <td><%= vf_light_sensor_event.name %></td>
+        <td><%= link_to 'Show', vf_light_sensor_event %></td>
+        <td><%= link_to 'Edit', edit_vf_light_sensor_event_path(vf_light_sensor_event) %></td>
+        <td><%= link_to 'Destroy', vf_light_sensor_event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Vf light sensor event', new_vf_light_sensor_event_path %>

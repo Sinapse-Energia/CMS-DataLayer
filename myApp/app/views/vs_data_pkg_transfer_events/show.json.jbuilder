@@ -1,0 +1,1 @@
+json.partial! "vs_data_pkg_transfer_events/vs_data_pkg_transfer_event", vs_data_pkg_transfer_event: @vs_data_pkg_transfer_event

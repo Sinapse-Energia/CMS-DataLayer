@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  subdomain: MyString
+  owner_id: 
+  v_account_id: 
+
+two:
+  subdomain: MyString
+  owner_id: 
+  v_account_id: 

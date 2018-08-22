@@ -1,0 +1,1 @@
+json.partial! "ar_flampactuator_targetlightcommands/ar_flampactuator_targetlightcommand", ar_flampactuator_targetlightcommand: @ar_flampactuator_targetlightcommand

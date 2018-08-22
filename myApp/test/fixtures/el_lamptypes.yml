@@ -1,0 +1,55 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  address: MyText
+  wattage: 1.5
+  v_controltype_id: 
+  control_volmax: 1.5
+  control_volmin: 1.5
+  min_lightoutput: 1
+  virtual_lightoutput: 1
+  dali_ledlinear: false
+  warmup_time: 1
+  cooldown_time: 1
+  low_currentthreshold: 1.5
+  high_currentthreshold: 1.5
+  low_lampvoltagethreshold: 1.5
+  high_lampvoltagethreshold: 1.5
+  max_operationghours: 1
+  powerlightgradient: 1.5
+  lamppowertolerance: 1.5
+  lamppowerhighthreshold: 1.5
+  lamppowerlowthreshold: 1.5
+  powerfactorthreshold: 1.5
+  lumendrepreciationcurve: MyText
+  v_clotype_id: 
+  seqbridge: 1
+  seqcms: 1
+
+two:
+  name: MyText
+  address: MyText
+  wattage: 1.5
+  v_controltype_id: 
+  control_volmax: 1.5
+  control_volmin: 1.5
+  min_lightoutput: 1
+  virtual_lightoutput: 1
+  dali_ledlinear: false
+  warmup_time: 1
+  cooldown_time: 1
+  low_currentthreshold: 1.5
+  high_currentthreshold: 1.5
+  low_lampvoltagethreshold: 1.5
+  high_lampvoltagethreshold: 1.5
+  max_operationghours: 1
+  powerlightgradient: 1.5
+  lamppowertolerance: 1.5
+  lamppowerhighthreshold: 1.5
+  lamppowerlowthreshold: 1.5
+  powerfactorthreshold: 1.5
+  lumendrepreciationcurve: MyText
+  v_clotype_id: 
+  seqbridge: 1
+  seqcms: 1

@@ -1,0 +1,49 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  cod_ident: MyText
+  location: MyText
+  longitude: 1.5
+  latitude: 1.5
+  altitude: 1.5
+  date_installation: 2018-08-08 11:26:58
+  date_data: 2018-08-08 11:26:58
+  cod_module: MyText
+  name_vial: MyText
+  number_vial: MyText
+  power_installed: MyText
+  power_contracted: MyText
+  switch_general: MyText
+  protection_mag: MyText
+  protection_diff: MyText
+  number_supply: MyText
+  number_countpower: MyText
+  clock_brand: MyText
+  clock_model: MyText
+  number_circuit: MyText
+  v_typecommand_id: 
+
+two:
+  name: MyText
+  cod_ident: MyText
+  location: MyText
+  longitude: 1.5
+  latitude: 1.5
+  altitude: 1.5
+  date_installation: 2018-08-08 11:26:58
+  date_data: 2018-08-08 11:26:58
+  cod_module: MyText
+  name_vial: MyText
+  number_vial: MyText
+  power_installed: MyText
+  power_contracted: MyText
+  switch_general: MyText
+  protection_mag: MyText
+  protection_diff: MyText
+  number_supply: MyText
+  number_countpower: MyText
+  clock_brand: MyText
+  clock_model: MyText
+  number_circuit: MyText
+  v_typecommand_id: 

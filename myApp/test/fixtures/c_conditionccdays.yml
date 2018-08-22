@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  c_start: MyText
+  v_occurrence_id: 
+  c_end: MyText
+  c_rulescondition_id: 
+  monday: false
+  tuesday: false
+  wednesday: false
+  thursday: false
+  friday: false
+  saturday: false
+  sunday: false
+
+two:
+  c_start: MyText
+  v_occurrence_id: 
+  c_end: MyText
+  c_rulescondition_id: 
+  monday: false
+  tuesday: false
+  wednesday: false
+  thursday: false
+  friday: false
+  saturday: false
+  sunday: false

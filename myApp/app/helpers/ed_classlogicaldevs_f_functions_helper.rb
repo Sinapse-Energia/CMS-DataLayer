@@ -1,0 +1,2 @@
+module EdClasslogicaldevsFFunctionsHelper
+end

@@ -1,0 +1,41 @@
+<%= form_for(@p_fixedtimecontrol) do |f| %>
+  <% if @p_fixedtimecontrol.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@p_fixedtimecontrol.errors.count, "error") %> prohibited this p_fixedtimecontrol from being saved:</h2>
+
+      <ul>
+      <% @p_fixedtimecontrol.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :start_time %><br>
+    <%= f.time_select :start_time %>
+  </div>
+  <div class="field">
+    <%= f.label :l_lightcommand_id %><br>
+    <%= f.text_field :l_lightcommand_id %>
+  </div>
+  <div class="field">
+    <%= f.label :ep_controlprogram_id %><br>
+    <%= f.text_field :ep_controlprogram_id %>
+  </div>
+  <div class="field">
+    <%= f.label :off_set %><br>
+    <%= f.number_field :off_set %>
+  </div>
+  <div class="field">
+    <%= f.label :v_astroclock_id %><br>
+    <%= f.text_field :v_astroclock_id %>
+  </div>
+  <div class="field">
+    <%= f.label :v_typeexecution_id %><br>
+    <%= f.text_field :v_typeexecution_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

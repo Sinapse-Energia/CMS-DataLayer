@@ -1,0 +1,61 @@
+<%= form_for(@c_conditionccday) do |f| %>
+  <% if @c_conditionccday.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@c_conditionccday.errors.count, "error") %> prohibited this c_conditionccday from being saved:</h2>
+
+      <ul>
+      <% @c_conditionccday.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :c_start %><br>
+    <%= f.text_area :c_start %>
+  </div>
+  <div class="field">
+    <%= f.label :v_occurrence_id %><br>
+    <%= f.text_field :v_occurrence_id %>
+  </div>
+  <div class="field">
+    <%= f.label :c_end %><br>
+    <%= f.text_area :c_end %>
+  </div>
+  <div class="field">
+    <%= f.label :c_rulescondition_id %><br>
+    <%= f.text_field :c_rulescondition_id %>
+  </div>
+  <div class="field">
+    <%= f.label :monday %><br>
+    <%= f.check_box :monday %>
+  </div>
+  <div class="field">
+    <%= f.label :tuesday %><br>
+    <%= f.check_box :tuesday %>
+  </div>
+  <div class="field">
+    <%= f.label :wednesday %><br>
+    <%= f.check_box :wednesday %>
+  </div>
+  <div class="field">
+    <%= f.label :thursday %><br>
+    <%= f.check_box :thursday %>
+  </div>
+  <div class="field">
+    <%= f.label :friday %><br>
+    <%= f.check_box :friday %>
+  </div>
+  <div class="field">
+    <%= f.label :saturday %><br>
+    <%= f.check_box :saturday %>
+  </div>
+  <div class="field">
+    <%= f.label :sunday %><br>
+    <%= f.check_box :sunday %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

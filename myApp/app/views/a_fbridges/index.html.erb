@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing A Fbridges</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Seqbridge</th>
+      <th>Seqcms</th>
+      <th>Adesc fbridge</th>
+      <th>F bridge</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @a_fbridges.each do |a_fbridge| %>
+      <tr>
+        <td><%= a_fbridge.value %></td>
+        <td><%= a_fbridge.seqbridge %></td>
+        <td><%= a_fbridge.seqcms %></td>
+        <td><%= a_fbridge.adesc_fbridge %></td>
+        <td><%= a_fbridge.f_bridge %></td>
+        <td><%= link_to 'Show', a_fbridge %></td>
+        <td><%= link_to 'Edit', edit_a_fbridge_path(a_fbridge) %></td>
+        <td><%= link_to 'Destroy', a_fbridge, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New A fbridge', new_a_fbridge_path %>

@@ -1,0 +1,2 @@
+module VTypelightsHelper
+end

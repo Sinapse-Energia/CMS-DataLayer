@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @si_general_information.name %>
+</p>
+
+<p>
+  <strong>Broker:</strong>
+  <%= @si_general_information.broker %>
+</p>
+
+<p>
+  <strong>Port:</strong>
+  <%= @si_general_information.port %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @si_general_information.user %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @si_general_information.password %>
+</p>
+
+<%= link_to 'Edit', edit_si_general_information_path(@si_general_information) %> |
+<%= link_to 'Back', si_general_informations_path %>

@@ -1,0 +1,2 @@
+module SiAlarmPanelsHelper
+end

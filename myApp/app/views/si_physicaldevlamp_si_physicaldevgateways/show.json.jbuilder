@@ -1,0 +1,1 @@
+json.partial! "si_physicaldevlamp_si_physicaldevgateways/si_physicaldevlamp_si_physicaldevgateway", si_physicaldevlamp_si_physicaldevgateway: @si_physicaldevlamp_si_physicaldevgateway

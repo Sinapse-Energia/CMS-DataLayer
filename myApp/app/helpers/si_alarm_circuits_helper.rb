@@ -1,0 +1,2 @@
+module SiAlarmCircuitsHelper
+end

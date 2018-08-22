@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Ed Classlogicaldevs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type device</th>
+      <th>Address</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ed_classlogicaldevs.each do |ed_classlogicaldev| %>
+      <tr>
+        <td><%= ed_classlogicaldev.name %></td>
+        <td><%= ed_classlogicaldev.type_device %></td>
+        <td><%= ed_classlogicaldev.address %></td>
+        <td><%= link_to 'Show', ed_classlogicaldev %></td>
+        <td><%= link_to 'Edit', edit_ed_classlogicaldev_path(ed_classlogicaldev) %></td>
+        <td><%= link_to 'Destroy', ed_classlogicaldev, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ed classlogicaldev', new_ed_classlogicaldev_path %>

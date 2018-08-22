@@ -1,0 +1,1 @@
+json.array! @ar_flampactuator_actuallightstates, partial: 'ar_flampactuator_actuallightstates/ar_flampactuator_actuallightstate', as: :ar_flampactuator_actuallightstate

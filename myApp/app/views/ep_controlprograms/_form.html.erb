@@ -1,0 +1,29 @@
+<%= form_for(@ep_controlprogram) do |f| %>
+  <% if @ep_controlprogram.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ep_controlprogram.errors.count, "error") %> prohibited this ep_controlprogram from being saved:</h2>
+
+      <ul>
+      <% @ep_controlprogram.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_area :name %>
+  </div>
+  <div class="field">
+    <%= f.label :seqbridge %><br>
+    <%= f.number_field :seqbridge %>
+  </div>
+  <div class="field">
+    <%= f.label :seqcms %><br>
+    <%= f.number_field :seqcms %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

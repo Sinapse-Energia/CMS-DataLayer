@@ -1,0 +1,2 @@
+module VPurposesHelper
+end

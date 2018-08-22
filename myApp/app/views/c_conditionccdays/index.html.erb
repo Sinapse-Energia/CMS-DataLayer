@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing C Conditionccdays</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>C start</th>
+      <th>V occurrence</th>
+      <th>C end</th>
+      <th>C rulescondition</th>
+      <th>Monday</th>
+      <th>Tuesday</th>
+      <th>Wednesday</th>
+      <th>Thursday</th>
+      <th>Friday</th>
+      <th>Saturday</th>
+      <th>Sunday</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @c_conditionccdays.each do |c_conditionccday| %>
+      <tr>
+        <td><%= c_conditionccday.c_start %></td>
+        <td><%= c_conditionccday.v_occurrence %></td>
+        <td><%= c_conditionccday.c_end %></td>
+        <td><%= c_conditionccday.c_rulescondition %></td>
+        <td><%= c_conditionccday.monday %></td>
+        <td><%= c_conditionccday.tuesday %></td>
+        <td><%= c_conditionccday.wednesday %></td>
+        <td><%= c_conditionccday.thursday %></td>
+        <td><%= c_conditionccday.friday %></td>
+        <td><%= c_conditionccday.saturday %></td>
+        <td><%= c_conditionccday.sunday %></td>
+        <td><%= link_to 'Show', c_conditionccday %></td>
+        <td><%= link_to 'Edit', edit_c_conditionccday_path(c_conditionccday) %></td>
+        <td><%= link_to 'Destroy', c_conditionccday, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New C conditionccday', new_c_conditionccday_path %>

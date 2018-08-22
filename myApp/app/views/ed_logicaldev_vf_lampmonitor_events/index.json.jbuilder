@@ -1,0 +1,1 @@
+json.array! @ed_logicaldev_vf_lampmonitor_events, partial: 'ed_logicaldev_vf_lampmonitor_events/ed_logicaldev_vf_lampmonitor_event', as: :ed_logicaldev_vf_lampmonitor_event

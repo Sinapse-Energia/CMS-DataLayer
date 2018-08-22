@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing V Controltypes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @v_controltypes.each do |v_controltype| %>
+      <tr>
+        <td><%= v_controltype.name %></td>
+        <td><%= link_to 'Show', v_controltype %></td>
+        <td><%= link_to 'Edit', edit_v_controltype_path(v_controltype) %></td>
+        <td><%= link_to 'Destroy', v_controltype, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New V controltype', new_v_controltype_path %>

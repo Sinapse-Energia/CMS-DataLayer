@@ -1,0 +1,2 @@
+json.extract! si_rf_communication, :id, :ed_logicaldev_id, :historical_valid, :historical_not_valid, :last_day_valid, :last_day_not_valid, :last_x_valid, :last_x_not_valid, :status, :repeater, :previous_last_day_valid, :previous_last_day_not_valid, :lamp_status, :alert_status, :rf_coverage, :rf_valid, :rf_not_valid, :rf_coverage_pd, :rf_valid_pd, :rf_not_valid_pd, :rf_variation, :created_at, :updated_at
+json.url si_rf_communication_url(si_rf_communication, format: :json)

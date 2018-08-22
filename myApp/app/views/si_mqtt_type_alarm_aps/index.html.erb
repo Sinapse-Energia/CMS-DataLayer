@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Si Mqtt Type Alarm Aps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type a</th>
+      <th>Subtype a</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @si_mqtt_type_alarm_aps.each do |si_mqtt_type_alarm_ap| %>
+      <tr>
+        <td><%= si_mqtt_type_alarm_ap.type_a %></td>
+        <td><%= si_mqtt_type_alarm_ap.subtype_a %></td>
+        <td><%= link_to 'Show', si_mqtt_type_alarm_ap %></td>
+        <td><%= link_to 'Edit', edit_si_mqtt_type_alarm_ap_path(si_mqtt_type_alarm_ap) %></td>
+        <td><%= link_to 'Destroy', si_mqtt_type_alarm_ap, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Si mqtt type alarm ap', new_si_mqtt_type_alarm_ap_path %>

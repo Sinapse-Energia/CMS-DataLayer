@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Ep Controlprograms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Seqbridge</th>
+      <th>Seqcms</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ep_controlprograms.each do |ep_controlprogram| %>
+      <tr>
+        <td><%= ep_controlprogram.name %></td>
+        <td><%= ep_controlprogram.seqbridge %></td>
+        <td><%= ep_controlprogram.seqcms %></td>
+        <td><%= link_to 'Show', ep_controlprogram %></td>
+        <td><%= link_to 'Edit', edit_ep_controlprogram_path(ep_controlprogram) %></td>
+        <td><%= link_to 'Destroy', ep_controlprogram, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ep controlprogram', new_ep_controlprogram_path %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Ar Flampactuator Defaultlightstates</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>F lampactuator</th>
+      <th>L lightstate</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ar_flampactuator_defaultlightstates.each do |ar_flampactuator_defaultlightstate| %>
+      <tr>
+        <td><%= ar_flampactuator_defaultlightstate.f_lampactuator %></td>
+        <td><%= ar_flampactuator_defaultlightstate.l_lightstate %></td>
+        <td><%= link_to 'Show', ar_flampactuator_defaultlightstate %></td>
+        <td><%= link_to 'Edit', edit_ar_flampactuator_defaultlightstate_path(ar_flampactuator_defaultlightstate) %></td>
+        <td><%= link_to 'Destroy', ar_flampactuator_defaultlightstate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ar flampactuator defaultlightstate', new_ar_flampactuator_defaultlightstate_path %>

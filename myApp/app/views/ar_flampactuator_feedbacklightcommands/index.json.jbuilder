@@ -1,0 +1,1 @@
+json.array! @ar_flampactuator_feedbacklightcommands, partial: 'ar_flampactuator_feedbacklightcommands/ar_flampactuator_feedbacklightcommand', as: :ar_flampactuator_feedbacklightcommand

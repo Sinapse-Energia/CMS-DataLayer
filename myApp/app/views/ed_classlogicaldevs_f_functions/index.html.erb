@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Ed Classlogicaldevs F Functions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ed classlogicaldev</th>
+      <th>F function</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ed_classlogicaldevs_f_functions.each do |ed_classlogicaldevs_f_function| %>
+      <tr>
+        <td><%= ed_classlogicaldevs_f_function.ed_classlogicaldev %></td>
+        <td><%= ed_classlogicaldevs_f_function.f_function %></td>
+        <td><%= link_to 'Show', ed_classlogicaldevs_f_function %></td>
+        <td><%= link_to 'Edit', edit_ed_classlogicaldevs_f_function_path(ed_classlogicaldevs_f_function) %></td>
+        <td><%= link_to 'Destroy', ed_classlogicaldevs_f_function, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ed classlogicaldevs f function', new_ed_classlogicaldevs_f_function_path %>

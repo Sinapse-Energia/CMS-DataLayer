@@ -1,0 +1,1 @@
+json.partial! "ed_logicaldev_vs_data_collect_events/ed_logicaldev_vs_data_collect_event", ed_logicaldev_vs_data_collect_event: @ed_logicaldev_vs_data_collect_event

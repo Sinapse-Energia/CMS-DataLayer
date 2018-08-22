@@ -1,0 +1,1 @@
+json.array! @si_alarm_circuit_si_physicaldevcircuits, partial: 'si_alarm_circuit_si_physicaldevcircuits/si_alarm_circuit_si_physicaldevcircuit', as: :si_alarm_circuit_si_physicaldevcircuit

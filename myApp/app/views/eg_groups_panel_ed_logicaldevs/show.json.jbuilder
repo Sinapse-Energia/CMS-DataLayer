@@ -1,0 +1,1 @@
+json.partial! "eg_groups_panel_ed_logicaldevs/eg_groups_panel_ed_logicaldev", eg_groups_panel_ed_logicaldev: @eg_groups_panel_ed_logicaldev

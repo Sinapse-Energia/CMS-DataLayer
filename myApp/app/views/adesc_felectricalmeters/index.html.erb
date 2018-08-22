@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Adesc Felectricalmeters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>V storagetype</th>
+      <th>Unit</th>
+      <th>Minvalue</th>
+      <th>Maxvalue</th>
+      <th>Regex</th>
+      <th>Enumeration</th>
+      <th>Read only</th>
+      <th>Maxinstances</th>
+      <th>Descr</th>
+      <th>Lightcommand</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @adesc_felectricalmeters.each do |adesc_felectricalmeter| %>
+      <tr>
+        <td><%= adesc_felectricalmeter.name %></td>
+        <td><%= adesc_felectricalmeter.v_storagetype %></td>
+        <td><%= adesc_felectricalmeter.unit %></td>
+        <td><%= adesc_felectricalmeter.minvalue %></td>
+        <td><%= adesc_felectricalmeter.maxvalue %></td>
+        <td><%= adesc_felectricalmeter.regex %></td>
+        <td><%= adesc_felectricalmeter.enumeration %></td>
+        <td><%= adesc_felectricalmeter.read_only %></td>
+        <td><%= adesc_felectricalmeter.maxinstances %></td>
+        <td><%= adesc_felectricalmeter.descr %></td>
+        <td><%= adesc_felectricalmeter.lightcommand %></td>
+        <td><%= link_to 'Show', adesc_felectricalmeter %></td>
+        <td><%= link_to 'Edit', edit_adesc_felectricalmeter_path(adesc_felectricalmeter) %></td>
+        <td><%= link_to 'Destroy', adesc_felectricalmeter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Adesc felectricalmeter', new_adesc_felectricalmeter_path %>

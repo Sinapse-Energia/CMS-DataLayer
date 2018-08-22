@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  c_start: MyText
+  c_end: MyText
+  c_rulescondition_id: 
+
+two:
+  c_start: MyText
+  c_end: MyText
+  c_rulescondition_id: 

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @si_email_list.description %>
+</p>
+
+<p>
+  <strong>Id user aux:</strong>
+  <%= @si_email_list.id_user_aux %>
+</p>
+
+<%= link_to 'Edit', edit_si_email_list_path(@si_email_list) %> |
+<%= link_to 'Back', si_email_lists_path %>

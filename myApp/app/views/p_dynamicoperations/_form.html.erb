@@ -1,0 +1,25 @@
+<%= form_for(@p_dynamicoperation) do |f| %>
+  <% if @p_dynamicoperation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@p_dynamicoperation.errors.count, "error") %> prohibited this p_dynamicoperation from being saved:</h2>
+
+      <ul>
+      <% @p_dynamicoperation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :set %><br>
+    <%= f.number_field :set %>
+  </div>
+  <div class="field">
+    <%= f.label :v_dynamicoperation_id %><br>
+    <%= f.text_field :v_dynamicoperation_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

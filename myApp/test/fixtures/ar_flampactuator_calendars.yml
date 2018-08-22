@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  f_lampactuator_id: 
+  ec_calendar_id: 
+  is_group: false
+  is_single: false
+  eg_group_id: 
+
+two:
+  f_lampactuator_id: 
+  ec_calendar_id: 
+  is_group: false
+  is_single: false
+  eg_group_id: 

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start_time: 2018-08-08 11:26:16
+  end_time: 2018-08-08 11:26:16
+  ep_controlprogram_id: 
+
+two:
+  start_time: 2018-08-08 11:26:16
+  end_time: 2018-08-08 11:26:16
+  ep_controlprogram_id: 

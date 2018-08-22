@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start_time: 2018-08-08 11:26:22
+  end_time: 2018-08-08 11:26:22
+  is_fixed: false
+  p_dynamicoperation_id: 
+  l_lightcommand_id: 
+  l_sensor_id: 
+  ep_controlprogram_id: 
+
+two:
+  start_time: 2018-08-08 11:26:22
+  end_time: 2018-08-08 11:26:22
+  is_fixed: false
+  p_dynamicoperation_id: 
+  l_lightcommand_id: 
+  l_sensor_id: 
+  ep_controlprogram_id: 

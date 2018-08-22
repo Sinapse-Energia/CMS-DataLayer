@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Si Sms Lists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Id user aux</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @si_sms_lists.each do |si_sms_list| %>
+      <tr>
+        <td><%= si_sms_list.description %></td>
+        <td><%= si_sms_list.id_user_aux %></td>
+        <td><%= link_to 'Show', si_sms_list %></td>
+        <td><%= link_to 'Edit', edit_si_sms_list_path(si_sms_list) %></td>
+        <td><%= link_to 'Destroy', si_sms_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Si sms list', new_si_sms_list_path %>

@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Si Rf Communications</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ed logicaldev</th>
+      <th>Historical valid</th>
+      <th>Historical not valid</th>
+      <th>Last day valid</th>
+      <th>Last day not valid</th>
+      <th>Last x valid</th>
+      <th>Last x not valid</th>
+      <th>Status</th>
+      <th>Repeater</th>
+      <th>Previous last day valid</th>
+      <th>Previous last day not valid</th>
+      <th>Lamp status</th>
+      <th>Alert status</th>
+      <th>Rf coverage</th>
+      <th>Rf valid</th>
+      <th>Rf not valid</th>
+      <th>Rf coverage pd</th>
+      <th>Rf valid pd</th>
+      <th>Rf not valid pd</th>
+      <th>Rf variation</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @si_rf_communications.each do |si_rf_communication| %>
+      <tr>
+        <td><%= si_rf_communication.ed_logicaldev %></td>
+        <td><%= si_rf_communication.historical_valid %></td>
+        <td><%= si_rf_communication.historical_not_valid %></td>
+        <td><%= si_rf_communication.last_day_valid %></td>
+        <td><%= si_rf_communication.last_day_not_valid %></td>
+        <td><%= si_rf_communication.last_x_valid %></td>
+        <td><%= si_rf_communication.last_x_not_valid %></td>
+        <td><%= si_rf_communication.status %></td>
+        <td><%= si_rf_communication.repeater %></td>
+        <td><%= si_rf_communication.previous_last_day_valid %></td>
+        <td><%= si_rf_communication.previous_last_day_not_valid %></td>
+        <td><%= si_rf_communication.lamp_status %></td>
+        <td><%= si_rf_communication.alert_status %></td>
+        <td><%= si_rf_communication.rf_coverage %></td>
+        <td><%= si_rf_communication.rf_valid %></td>
+        <td><%= si_rf_communication.rf_not_valid %></td>
+        <td><%= si_rf_communication.rf_coverage_pd %></td>
+        <td><%= si_rf_communication.rf_valid_pd %></td>
+        <td><%= si_rf_communication.rf_not_valid_pd %></td>
+        <td><%= si_rf_communication.rf_variation %></td>
+        <td><%= link_to 'Show', si_rf_communication %></td>
+        <td><%= link_to 'Edit', edit_si_rf_communication_path(si_rf_communication) %></td>
+        <td><%= link_to 'Destroy', si_rf_communication, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Si rf communication', new_si_rf_communication_path %>

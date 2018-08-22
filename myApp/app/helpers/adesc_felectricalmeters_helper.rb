@@ -1,0 +1,2 @@
+module AdescFelectricalmetersHelper
+end

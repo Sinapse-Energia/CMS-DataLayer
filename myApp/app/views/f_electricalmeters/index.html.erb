@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing F Electricalmeters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ed logicaldev</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @f_electricalmeters.each do |f_electricalmeter| %>
+      <tr>
+        <td><%= f_electricalmeter.ed_logicaldev %></td>
+        <td><%= link_to 'Show', f_electricalmeter %></td>
+        <td><%= link_to 'Edit', edit_f_electricalmeter_path(f_electricalmeter) %></td>
+        <td><%= link_to 'Destroy', f_electricalmeter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New F electricalmeter', new_f_electricalmeter_path %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Ar Fcommtypes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>F communication</th>
+      <th>V typecommunication</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ar_fcommtypes.each do |ar_fcommtype| %>
+      <tr>
+        <td><%= ar_fcommtype.f_communication %></td>
+        <td><%= ar_fcommtype.v_typecommunication %></td>
+        <td><%= link_to 'Show', ar_fcommtype %></td>
+        <td><%= link_to 'Edit', edit_ar_fcommtype_path(ar_fcommtype) %></td>
+        <td><%= link_to 'Destroy', ar_fcommtype, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ar fcommtype', new_ar_fcommtype_path %>

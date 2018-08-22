@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing F Lampmonitors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ed logicaldev</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @f_lampmonitors.each do |f_lampmonitor| %>
+      <tr>
+        <td><%= f_lampmonitor.ed_logicaldev %></td>
+        <td><%= link_to 'Show', f_lampmonitor %></td>
+        <td><%= link_to 'Edit', edit_f_lampmonitor_path(f_lampmonitor) %></td>
+        <td><%= link_to 'Destroy', f_lampmonitor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New F lampmonitor', new_f_lampmonitor_path %>

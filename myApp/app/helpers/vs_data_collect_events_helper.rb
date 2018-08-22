@@ -1,0 +1,2 @@
+module VsDataCollectEventsHelper
+end

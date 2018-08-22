@@ -1,0 +1,2 @@
+module AFbridgesHelper
+end

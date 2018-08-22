@@ -1,0 +1,25 @@
+<%= form_for(@ed_logicaldev_si_physicaldevgateway) do |f| %>
+  <% if @ed_logicaldev_si_physicaldevgateway.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ed_logicaldev_si_physicaldevgateway.errors.count, "error") %> prohibited this ed_logicaldev_si_physicaldevgateway from being saved:</h2>
+
+      <ul>
+      <% @ed_logicaldev_si_physicaldevgateway.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ed_logicaldev_id %><br>
+    <%= f.text_field :ed_logicaldev_id %>
+  </div>
+  <div class="field">
+    <%= f.label :si_physicaldevgateway_id %><br>
+    <%= f.text_field :si_physicaldevgateway_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

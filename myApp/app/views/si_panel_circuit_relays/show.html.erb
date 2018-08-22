@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Si physicaldevpanel:</strong>
+  <%= @si_panel_circuit_relay.si_physicaldevpanel %>
+</p>
+
+<p>
+  <strong>Si physicaldevcircuit:</strong>
+  <%= @si_panel_circuit_relay.si_physicaldevcircuit %>
+</p>
+
+<p>
+  <strong>Relay:</strong>
+  <%= @si_panel_circuit_relay.relay %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @si_panel_circuit_relay.status %>
+</p>
+
+<%= link_to 'Edit', edit_si_panel_circuit_relay_path(@si_panel_circuit_relay) %> |
+<%= link_to 'Back', si_panel_circuit_relays_path %>

@@ -1,0 +1,117 @@
+<%= form_for(@el_lamptype) do |f| %>
+  <% if @el_lamptype.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@el_lamptype.errors.count, "error") %> prohibited this el_lamptype from being saved:</h2>
+
+      <ul>
+      <% @el_lamptype.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_area :name %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_area :address %>
+  </div>
+  <div class="field">
+    <%= f.label :wattage %><br>
+    <%= f.text_field :wattage %>
+  </div>
+  <div class="field">
+    <%= f.label :v_controltype_id %><br>
+    <%= f.text_field :v_controltype_id %>
+  </div>
+  <div class="field">
+    <%= f.label :control_volmax %><br>
+    <%= f.text_field :control_volmax %>
+  </div>
+  <div class="field">
+    <%= f.label :control_volmin %><br>
+    <%= f.text_field :control_volmin %>
+  </div>
+  <div class="field">
+    <%= f.label :min_lightoutput %><br>
+    <%= f.number_field :min_lightoutput %>
+  </div>
+  <div class="field">
+    <%= f.label :virtual_lightoutput %><br>
+    <%= f.number_field :virtual_lightoutput %>
+  </div>
+  <div class="field">
+    <%= f.label :dali_ledlinear %><br>
+    <%= f.check_box :dali_ledlinear %>
+  </div>
+  <div class="field">
+    <%= f.label :warmup_time %><br>
+    <%= f.number_field :warmup_time %>
+  </div>
+  <div class="field">
+    <%= f.label :cooldown_time %><br>
+    <%= f.number_field :cooldown_time %>
+  </div>
+  <div class="field">
+    <%= f.label :low_currentthreshold %><br>
+    <%= f.text_field :low_currentthreshold %>
+  </div>
+  <div class="field">
+    <%= f.label :high_currentthreshold %><br>
+    <%= f.text_field :high_currentthreshold %>
+  </div>
+  <div class="field">
+    <%= f.label :low_lampvoltagethreshold %><br>
+    <%= f.text_field :low_lampvoltagethreshold %>
+  </div>
+  <div class="field">
+    <%= f.label :high_lampvoltagethreshold %><br>
+    <%= f.text_field :high_lampvoltagethreshold %>
+  </div>
+  <div class="field">
+    <%= f.label :max_operationghours %><br>
+    <%= f.number_field :max_operationghours %>
+  </div>
+  <div class="field">
+    <%= f.label :powerlightgradient %><br>
+    <%= f.text_field :powerlightgradient %>
+  </div>
+  <div class="field">
+    <%= f.label :lamppowertolerance %><br>
+    <%= f.text_field :lamppowertolerance %>
+  </div>
+  <div class="field">
+    <%= f.label :lamppowerhighthreshold %><br>
+    <%= f.text_field :lamppowerhighthreshold %>
+  </div>
+  <div class="field">
+    <%= f.label :lamppowerlowthreshold %><br>
+    <%= f.text_field :lamppowerlowthreshold %>
+  </div>
+  <div class="field">
+    <%= f.label :powerfactorthreshold %><br>
+    <%= f.text_field :powerfactorthreshold %>
+  </div>
+  <div class="field">
+    <%= f.label :lumendrepreciationcurve %><br>
+    <%= f.text_area :lumendrepreciationcurve %>
+  </div>
+  <div class="field">
+    <%= f.label :v_clotype_id %><br>
+    <%= f.text_field :v_clotype_id %>
+  </div>
+  <div class="field">
+    <%= f.label :seqbridge %><br>
+    <%= f.number_field :seqbridge %>
+  </div>
+  <div class="field">
+    <%= f.label :seqcms %><br>
+    <%= f.number_field :seqcms %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

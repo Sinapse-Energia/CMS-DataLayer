@@ -1,0 +1,2 @@
+module VTypeAlarmPanelsHelper
+end

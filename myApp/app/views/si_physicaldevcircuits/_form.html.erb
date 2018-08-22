@@ -1,0 +1,57 @@
+<%= form_for(@si_physicaldevcircuit) do |f| %>
+  <% if @si_physicaldevcircuit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@si_physicaldevcircuit.errors.count, "error") %> prohibited this si_physicaldevcircuit from being saved:</h2>
+
+      <ul>
+      <% @si_physicaldevcircuit.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_area :name %>
+  </div>
+  <div class="field">
+    <%= f.label :type_circuit %><br>
+    <%= f.text_area :type_circuit %>
+  </div>
+  <div class="field">
+    <%= f.label :magnetotermic %><br>
+    <%= f.check_box :magnetotermic %>
+  </div>
+  <div class="field">
+    <%= f.label :differencial %><br>
+    <%= f.check_box :differencial %>
+  </div>
+  <div class="field">
+    <%= f.label :conductor_type %><br>
+    <%= f.text_area :conductor_type %>
+  </div>
+  <div class="field">
+    <%= f.label :conductor_section %><br>
+    <%= f.text_area :conductor_section %>
+  </div>
+  <div class="field">
+    <%= f.label :canalization_type %><br>
+    <%= f.text_area :canalization_type %>
+  </div>
+  <div class="field">
+    <%= f.label :si_physicaldevpanel_id %><br>
+    <%= f.text_field :si_physicaldevpanel_id %>
+  </div>
+  <div class="field">
+    <%= f.label :circuit_number %><br>
+    <%= f.number_field :circuit_number %>
+  </div>
+  <div class="field">
+    <%= f.label :telemanagement %><br>
+    <%= f.check_box :telemanagement %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

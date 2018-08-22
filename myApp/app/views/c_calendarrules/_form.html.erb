@@ -1,0 +1,37 @@
+<%= form_for(@c_calendarrule) do |f| %>
+  <% if @c_calendarrule.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@c_calendarrule.errors.count, "error") %> prohibited this c_calendarrule from being saved:</h2>
+
+      <ul>
+      <% @c_calendarrule.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :start_date %><br>
+    <%= f.datetime_select :start_date %>
+  </div>
+  <div class="field">
+    <%= f.label :end_date %><br>
+    <%= f.datetime_select :end_date %>
+  </div>
+  <div class="field">
+    <%= f.label :ep_controlprogram_id %><br>
+    <%= f.text_field :ep_controlprogram_id %>
+  </div>
+  <div class="field">
+    <%= f.label :ec_calendar_id %><br>
+    <%= f.text_field :ec_calendar_id %>
+  </div>
+  <div class="field">
+    <%= f.label :always %><br>
+    <%= f.check_box :always %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

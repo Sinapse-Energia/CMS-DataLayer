@@ -1,0 +1,21 @@
+<%= form_for(@v_typeexecution) do |f| %>
+  <% if @v_typeexecution.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@v_typeexecution.errors.count, "error") %> prohibited this v_typeexecution from being saved:</h2>
+
+      <ul>
+      <% @v_typeexecution.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

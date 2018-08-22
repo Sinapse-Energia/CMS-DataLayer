@@ -1,0 +1,2 @@
+module SiAlarmLampsHelper
+end

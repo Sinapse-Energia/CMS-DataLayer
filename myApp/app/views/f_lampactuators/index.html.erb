@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing F Lampactuators</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ed logicaldev</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @f_lampactuators.each do |f_lampactuator| %>
+      <tr>
+        <td><%= f_lampactuator.ed_logicaldev %></td>
+        <td><%= link_to 'Show', f_lampactuator %></td>
+        <td><%= link_to 'Edit', edit_f_lampactuator_path(f_lampactuator) %></td>
+        <td><%= link_to 'Destroy', f_lampactuator, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New F lampactuator', new_f_lampactuator_path %>

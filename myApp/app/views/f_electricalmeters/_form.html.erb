@@ -1,0 +1,21 @@
+<%= form_for(@f_electricalmeter) do |f| %>
+  <% if @f_electricalmeter.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@f_electricalmeter.errors.count, "error") %> prohibited this f_electricalmeter from being saved:</h2>
+
+      <ul>
+      <% @f_electricalmeter.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ed_logicaldev_id %><br>
+    <%= f.text_field :ed_logicaldev_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

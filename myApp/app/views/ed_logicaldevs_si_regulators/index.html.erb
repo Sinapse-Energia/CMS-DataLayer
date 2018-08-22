@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Ed Logicaldevs Si Regulators</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ed logicaldev</th>
+      <th>Si regulator</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ed_logicaldevs_si_regulators.each do |ed_logicaldevs_si_regulator| %>
+      <tr>
+        <td><%= ed_logicaldevs_si_regulator.ed_logicaldev %></td>
+        <td><%= ed_logicaldevs_si_regulator.si_regulator %></td>
+        <td><%= link_to 'Show', ed_logicaldevs_si_regulator %></td>
+        <td><%= link_to 'Edit', edit_ed_logicaldevs_si_regulator_path(ed_logicaldevs_si_regulator) %></td>
+        <td><%= link_to 'Destroy', ed_logicaldevs_si_regulator, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ed logicaldevs si regulator', new_ed_logicaldevs_si_regulator_path %>

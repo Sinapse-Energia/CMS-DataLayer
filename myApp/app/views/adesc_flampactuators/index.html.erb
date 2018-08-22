@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Adesc Flampactuators</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>V storagetype</th>
+      <th>Unit</th>
+      <th>Minvalue</th>
+      <th>Maxvalue</th>
+      <th>Regex</th>
+      <th>Enumeration</th>
+      <th>Read only</th>
+      <th>Maxinstances</th>
+      <th>Descr</th>
+      <th>Lightcommand</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @adesc_flampactuators.each do |adesc_flampactuator| %>
+      <tr>
+        <td><%= adesc_flampactuator.name %></td>
+        <td><%= adesc_flampactuator.v_storagetype %></td>
+        <td><%= adesc_flampactuator.unit %></td>
+        <td><%= adesc_flampactuator.minvalue %></td>
+        <td><%= adesc_flampactuator.maxvalue %></td>
+        <td><%= adesc_flampactuator.regex %></td>
+        <td><%= adesc_flampactuator.enumeration %></td>
+        <td><%= adesc_flampactuator.read_only %></td>
+        <td><%= adesc_flampactuator.maxinstances %></td>
+        <td><%= adesc_flampactuator.descr %></td>
+        <td><%= adesc_flampactuator.lightcommand %></td>
+        <td><%= link_to 'Show', adesc_flampactuator %></td>
+        <td><%= link_to 'Edit', edit_adesc_flampactuator_path(adesc_flampactuator) %></td>
+        <td><%= link_to 'Destroy', adesc_flampactuator, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Adesc flampactuator', new_adesc_flampactuator_path %>

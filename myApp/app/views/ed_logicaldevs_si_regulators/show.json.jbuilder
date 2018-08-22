@@ -1,0 +1,1 @@
+json.partial! "ed_logicaldevs_si_regulators/ed_logicaldevs_si_regulator", ed_logicaldevs_si_regulator: @ed_logicaldevs_si_regulator

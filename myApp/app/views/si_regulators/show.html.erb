@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id regulator:</strong>
+  <%= @si_regulator.id_regulator %>
+</p>
+
+<p>
+  <strong>Brand regulator:</strong>
+  <%= @si_regulator.brand_regulator %>
+</p>
+
+<p>
+  <strong>Power regulator:</strong>
+  <%= @si_regulator.power_regulator %>
+</p>
+
+<p>
+  <strong>V typeregulator:</strong>
+  <%= @si_regulator.v_typeregulator %>
+</p>
+
+<p>
+  <strong>V stateregulator:</strong>
+  <%= @si_regulator.v_stateregulator %>
+</p>
+
+<p>
+  <strong>Energy loss:</strong>
+  <%= @si_regulator.energy_loss %>
+</p>
+
+<%= link_to 'Edit', edit_si_regulator_path(@si_regulator) %> |
+<%= link_to 'Back', si_regulators_path %>

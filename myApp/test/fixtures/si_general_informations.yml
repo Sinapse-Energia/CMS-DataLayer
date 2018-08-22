@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  broker: MyString
+  port: 1
+  user: MyString
+  password: MyString
+
+two:
+  name: MyText
+  broker: MyString
+  port: 1
+  user: MyString
+  password: MyString

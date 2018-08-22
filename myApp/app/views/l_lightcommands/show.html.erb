@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>L lightstate:</strong>
+  <%= @l_lightcommand.l_lightstate %>
+</p>
+
+<p>
+  <strong>Es scene:</strong>
+  <%= @l_lightcommand.es_scene %>
+</p>
+
+<p>
+  <strong>V reason:</strong>
+  <%= @l_lightcommand.v_reason %>
+</p>
+
+<p>
+  <strong>Cms refid:</strong>
+  <%= @l_lightcommand.cms_refid %>
+</p>
+
+<p>
+  <strong>Ref addr control:</strong>
+  <%= @l_lightcommand.ref_addr_control %>
+</p>
+
+<p>
+  <strong>Ref addr sensor:</strong>
+  <%= @l_lightcommand.ref_addr_sensor %>
+</p>
+
+<p>
+  <strong>Expiration:</strong>
+  <%= @l_lightcommand.expiration %>
+</p>
+
+<p>
+  <strong>V action:</strong>
+  <%= @l_lightcommand.v_action %>
+</p>
+
+<%= link_to 'Edit', edit_l_lightcommand_path(@l_lightcommand) %> |
+<%= link_to 'Back', l_lightcommands_path %>

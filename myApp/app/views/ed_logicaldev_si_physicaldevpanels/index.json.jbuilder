@@ -1,0 +1,1 @@
+json.array! @ed_logicaldev_si_physicaldevpanels, partial: 'ed_logicaldev_si_physicaldevpanels/ed_logicaldev_si_physicaldevpanel', as: :ed_logicaldev_si_physicaldevpanel

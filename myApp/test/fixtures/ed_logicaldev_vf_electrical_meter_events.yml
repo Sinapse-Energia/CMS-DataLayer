@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ed_logicaldev_id: 
+  v_f_electrical_meter_event_id: 
+
+two:
+  ed_logicaldev_id: 
+  v_f_electrical_meter_event_id: 

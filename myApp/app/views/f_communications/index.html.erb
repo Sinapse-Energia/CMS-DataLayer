@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing F Communications</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ed logicaldev</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @f_communications.each do |f_communication| %>
+      <tr>
+        <td><%= f_communication.ed_logicaldev %></td>
+        <td><%= link_to 'Show', f_communication %></td>
+        <td><%= link_to 'Edit', edit_f_communication_path(f_communication) %></td>
+        <td><%= link_to 'Destroy', f_communication, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New F communication', new_f_communication_path %>

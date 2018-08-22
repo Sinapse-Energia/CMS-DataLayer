@@ -1,0 +1,1 @@
+json.partial! "ed_logicaldev_vf_lampmonitor_events/ed_logicaldev_vf_lampmonitor_event", ed_logicaldev_vf_lampmonitor_event: @ed_logicaldev_vf_lampmonitor_event

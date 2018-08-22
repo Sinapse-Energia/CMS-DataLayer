@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Ar Flampactuator Targetlightcommands</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>F lampactuator</th>
+      <th>L lightcommand</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ar_flampactuator_targetlightcommands.each do |ar_flampactuator_targetlightcommand| %>
+      <tr>
+        <td><%= ar_flampactuator_targetlightcommand.f_lampactuator %></td>
+        <td><%= ar_flampactuator_targetlightcommand.l_lightcommand %></td>
+        <td><%= link_to 'Show', ar_flampactuator_targetlightcommand %></td>
+        <td><%= link_to 'Edit', edit_ar_flampactuator_targetlightcommand_path(ar_flampactuator_targetlightcommand) %></td>
+        <td><%= link_to 'Destroy', ar_flampactuator_targetlightcommand, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ar flampactuator targetlightcommand', new_ar_flampactuator_targetlightcommand_path %>

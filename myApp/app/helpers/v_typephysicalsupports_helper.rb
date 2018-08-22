@@ -1,0 +1,2 @@
+module VTypephysicalsupportsHelper
+end

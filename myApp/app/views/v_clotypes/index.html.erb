@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing V Clotypes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @v_clotypes.each do |v_clotype| %>
+      <tr>
+        <td><%= v_clotype.name %></td>
+        <td><%= link_to 'Show', v_clotype %></td>
+        <td><%= link_to 'Edit', edit_v_clotype_path(v_clotype) %></td>
+        <td><%= link_to 'Destroy', v_clotype, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New V clotype', new_v_clotype_path %>

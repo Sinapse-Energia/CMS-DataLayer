@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing P Activeperiodabsolutes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Start time</th>
+      <th>End time</th>
+      <th>Ep controlprogram</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @p_activeperiodabsolutes.each do |p_activeperiodabsolute| %>
+      <tr>
+        <td><%= p_activeperiodabsolute.start_time %></td>
+        <td><%= p_activeperiodabsolute.end_time %></td>
+        <td><%= p_activeperiodabsolute.ep_controlprogram %></td>
+        <td><%= link_to 'Show', p_activeperiodabsolute %></td>
+        <td><%= link_to 'Edit', edit_p_activeperiodabsolute_path(p_activeperiodabsolute) %></td>
+        <td><%= link_to 'Destroy', p_activeperiodabsolute, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New P activeperiodabsolute', new_p_activeperiodabsolute_path %>

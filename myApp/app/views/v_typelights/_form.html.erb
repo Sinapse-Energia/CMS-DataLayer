@@ -1,0 +1,25 @@
+<%= form_for(@v_typelight) do |f| %>
+  <% if @v_typelight.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@v_typelight.errors.count, "error") %> prohibited this v_typelight from being saved:</h2>
+
+      <ul>
+      <% @v_typelight.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_area :name %>
+  </div>
+  <div class="field">
+    <%= f.label :short_name %><br>
+    <%= f.text_area :short_name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

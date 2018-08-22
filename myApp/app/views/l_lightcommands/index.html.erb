@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing L Lightcommands</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>L lightstate</th>
+      <th>Es scene</th>
+      <th>V reason</th>
+      <th>Cms refid</th>
+      <th>Ref addr control</th>
+      <th>Ref addr sensor</th>
+      <th>Expiration</th>
+      <th>V action</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @l_lightcommands.each do |l_lightcommand| %>
+      <tr>
+        <td><%= l_lightcommand.l_lightstate %></td>
+        <td><%= l_lightcommand.es_scene %></td>
+        <td><%= l_lightcommand.v_reason %></td>
+        <td><%= l_lightcommand.cms_refid %></td>
+        <td><%= l_lightcommand.ref_addr_control %></td>
+        <td><%= l_lightcommand.ref_addr_sensor %></td>
+        <td><%= l_lightcommand.expiration %></td>
+        <td><%= l_lightcommand.v_action %></td>
+        <td><%= link_to 'Show', l_lightcommand %></td>
+        <td><%= link_to 'Edit', edit_l_lightcommand_path(l_lightcommand) %></td>
+        <td><%= link_to 'Destroy', l_lightcommand, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New L lightcommand', new_l_lightcommand_path %>

@@ -1,0 +1,2 @@
+module FLampmonitorsHelper
+end

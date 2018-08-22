@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  a_flampmonitor_hist_id: 1
+  ed_logicaldev_id: 1
+  adesc_flampmonitor_id: 1
+  si_physicaldevlamp_id: 1
+  value: MyText
+  time_stamp: 2018-08-09 12:28:45
+  type_count: MyText
+
+two:
+  a_flampmonitor_hist_id: 1
+  ed_logicaldev_id: 1
+  adesc_flampmonitor_id: 1
+  si_physicaldevlamp_id: 1
+  value: MyText
+  time_stamp: 2018-08-09 12:28:45
+  type_count: MyText

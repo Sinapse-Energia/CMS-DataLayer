@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing A Flampactuators</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Seqbridge</th>
+      <th>Seqcms</th>
+      <th>Adesc flampactuator</th>
+      <th>F lampactuator</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @a_flampactuators.each do |a_flampactuator| %>
+      <tr>
+        <td><%= a_flampactuator.value %></td>
+        <td><%= a_flampactuator.seqbridge %></td>
+        <td><%= a_flampactuator.seqcms %></td>
+        <td><%= a_flampactuator.adesc_flampactuator %></td>
+        <td><%= a_flampactuator.f_lampactuator %></td>
+        <td><%= link_to 'Show', a_flampactuator %></td>
+        <td><%= link_to 'Edit', edit_a_flampactuator_path(a_flampactuator) %></td>
+        <td><%= link_to 'Destroy', a_flampactuator, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New A flampactuator', new_a_flampactuator_path %>

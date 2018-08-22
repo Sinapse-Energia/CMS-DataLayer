@@ -1,0 +1,1 @@
+json.partial! "ar_flampactuator_lamptypes/ar_flampactuator_lamptype", ar_flampactuator_lamptype: @ar_flampactuator_lamptype

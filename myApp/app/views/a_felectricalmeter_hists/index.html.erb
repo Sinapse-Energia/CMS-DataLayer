@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing A Felectricalmeter Hists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ed logicaldev</th>
+      <th>Adesc felectricalmeter</th>
+      <th>Value</th>
+      <th>Time stamp</th>
+      <th>Type count</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @a_felectricalmeter_hists.each do |a_felectricalmeter_hist| %>
+      <tr>
+        <td><%= a_felectricalmeter_hist.ed_logicaldev %></td>
+        <td><%= a_felectricalmeter_hist.adesc_felectricalmeter %></td>
+        <td><%= a_felectricalmeter_hist.value %></td>
+        <td><%= a_felectricalmeter_hist.time_stamp %></td>
+        <td><%= a_felectricalmeter_hist.type_count %></td>
+        <td><%= link_to 'Show', a_felectricalmeter_hist %></td>
+        <td><%= link_to 'Edit', edit_a_felectricalmeter_hist_path(a_felectricalmeter_hist) %></td>
+        <td><%= link_to 'Destroy', a_felectricalmeter_hist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New A felectricalmeter hist', new_a_felectricalmeter_hist_path %>

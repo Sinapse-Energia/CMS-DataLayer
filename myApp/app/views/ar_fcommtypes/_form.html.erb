@@ -1,0 +1,25 @@
+<%= form_for(@ar_fcommtype) do |f| %>
+  <% if @ar_fcommtype.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ar_fcommtype.errors.count, "error") %> prohibited this ar_fcommtype from being saved:</h2>
+
+      <ul>
+      <% @ar_fcommtype.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :f_communication_id %><br>
+    <%= f.text_field :f_communication_id %>
+  </div>
+  <div class="field">
+    <%= f.label :v_typecommunication_id %><br>
+    <%= f.text_field :v_typecommunication_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

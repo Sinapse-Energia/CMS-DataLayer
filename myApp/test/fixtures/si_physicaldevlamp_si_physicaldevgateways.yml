@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  si_physicaldevlamp_id: 
+  si_physicaldevgateway_id: 
+  distance_lamp_gateway: 1
+  distance_level: 1
+
+two:
+  si_physicaldevlamp_id: 
+  si_physicaldevgateway_id: 
+  distance_lamp_gateway: 1
+  distance_level: 1

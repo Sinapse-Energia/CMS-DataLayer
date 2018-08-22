@@ -1,0 +1,1 @@
+json.array! @ed_logicaldev_vf_binary_sensor_events, partial: 'ed_logicaldev_vf_binary_sensor_events/ed_logicaldev_vf_binary_sensor_event', as: :ed_logicaldev_vf_binary_sensor_event

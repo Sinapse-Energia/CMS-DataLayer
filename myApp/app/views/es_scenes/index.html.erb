@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Es Scenes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Scene</th>
+      <th>L lightstate</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @es_scenes.each do |es_scene| %>
+      <tr>
+        <td><%= es_scene.scene %></td>
+        <td><%= es_scene.l_lightstate %></td>
+        <td><%= link_to 'Show', es_scene %></td>
+        <td><%= link_to 'Edit', edit_es_scene_path(es_scene) %></td>
+        <td><%= link_to 'Destroy', es_scene, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Es scene', new_es_scene_path %>

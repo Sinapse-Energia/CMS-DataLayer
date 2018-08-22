@@ -1,0 +1,2 @@
+module ArFcommtypesHelper
+end

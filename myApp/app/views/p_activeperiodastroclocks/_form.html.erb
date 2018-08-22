@@ -1,0 +1,29 @@
+<%= form_for(@p_activeperiodastroclock) do |f| %>
+  <% if @p_activeperiodastroclock.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@p_activeperiodastroclock.errors.count, "error") %> prohibited this p_activeperiodastroclock from being saved:</h2>
+
+      <ul>
+      <% @p_activeperiodastroclock.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :sunset_offset %><br>
+    <%= f.number_field :sunset_offset %>
+  </div>
+  <div class="field">
+    <%= f.label :sunrise_offset %><br>
+    <%= f.number_field :sunrise_offset %>
+  </div>
+  <div class="field">
+    <%= f.label :ep_controlprogram_id %><br>
+    <%= f.text_field :ep_controlprogram_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

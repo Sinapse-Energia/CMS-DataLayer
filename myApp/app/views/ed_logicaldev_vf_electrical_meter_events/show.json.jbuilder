@@ -1,0 +1,1 @@
+json.partial! "ed_logicaldev_vf_electrical_meter_events/ed_logicaldev_vf_electrical_meter_event", ed_logicaldev_vf_electrical_meter_event: @ed_logicaldev_vf_electrical_meter_event

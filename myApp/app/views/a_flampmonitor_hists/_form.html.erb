@@ -1,0 +1,37 @@
+<%= form_for(@a_flampmonitor_hist) do |f| %>
+  <% if @a_flampmonitor_hist.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@a_flampmonitor_hist.errors.count, "error") %> prohibited this a_flampmonitor_hist from being saved:</h2>
+
+      <ul>
+      <% @a_flampmonitor_hist.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ed_logicaldev_id %><br>
+    <%= f.text_field :ed_logicaldev_id %>
+  </div>
+  <div class="field">
+    <%= f.label :adesc_flampmonitor_id %><br>
+    <%= f.text_field :adesc_flampmonitor_id %>
+  </div>
+  <div class="field">
+    <%= f.label :value %><br>
+    <%= f.text_area :value %>
+  </div>
+  <div class="field">
+    <%= f.label :time_stamp %><br>
+    <%= f.datetime_select :time_stamp %>
+  </div>
+  <div class="field">
+    <%= f.label :type_count %><br>
+    <%= f.text_area :type_count %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
