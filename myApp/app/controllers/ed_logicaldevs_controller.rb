@@ -156,7 +156,7 @@ class EdLogicaldevsController < ApplicationController
               @new_res[ts][:power] = m[:power].round(2)
               @new_res[ts][:dimming] = m[:dimming]
               @new_res[ts][:time_stamp] = m[:time_stamp]
-              @new_res[ts][:real_data] = true
+              @new_res[ts][:real_data] = false
             end
           end
           render :json => {:data => @new_res}
