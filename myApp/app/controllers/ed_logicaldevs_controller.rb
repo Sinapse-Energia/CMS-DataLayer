@@ -61,8 +61,13 @@ class EdLogicaldevsController < ApplicationController
     end
   end
 
+# ****************copy data from here*******************************
+
+  # smart data get monitoring api
   def get_monitoring_profile
+    # find all the data with id
     @af = AFlampmonitorHist.where(ed_logicaldev_id: params[:id], created_at: Date.parse(params[:start_date]).beginning_of_day..Date.parse(params[:end_date]).end_of_day)
+
     if @af.present?
       elspl = EdLogicaldevSiPhysicaldevlamp.find_by(ed_logicaldev_id: params[:id])
       similar_data = SiPhysicaldevlamp.find_by(id: elspl.si_physicaldevlamp_id)
@@ -77,7 +82,10 @@ class EdLogicaldevsController < ApplicationController
       @count_current = 0
       @count_power = 0
       @count_diming = 0
+
+      # cunter for the number of voltage, current, power, dimming
       counter
+
       if @count_current >= @n.to_i && @count_diming >= @n.to_i && @count_power >= @n.to_i && @count_voltage >= @n.to_i
         add_data_in_array
         group_by_values_with_time_stamp_real_data
@@ -97,68 +105,25 @@ class EdLogicaldevsController < ApplicationController
             add_data_in_array
           end
         end
+
+        # group the data with time_stamp
         group_by_values_with_time_stamp_approx_data
+
         if @res.present?
           voltage = 0
           current = 0
           power = 0
           dimming = 0
-          arr_voltage = []
-          arr_current = []
-          arr_power = []
-          arr_dimming = []
-          new_arr = []
+          @arr_voltage = []
+          @arr_current = []
+          @arr_power = []
+          @arr_dimming = []
+          @new_arr = []
           @new_res = {}
-          (1..params[:number_of_res].to_i).each do |x|
-            unreal_data = UnrealDataSearch.where(time_stamp: Date.parse(params[:start_date]).beginning_of_day + (x-1)*params[:t_sampling].to_i*60..Date.parse(params[:end_date]).beginning_of_day + x*params[:t_sampling].to_i*60)
-            
-            unreal_data.each do |data|
-              voltage = data[:voltage]
-              current = data[:current]
-              power = data[:power]
-              dimming = data[:dimming]
-              arr_voltage << voltage
-              arr_current << current
-              arr_power << power
-              arr_dimming << dimming
-            end
-            begin
-              # avg of all the voltage
-              remove_min_voltage = arr_voltage.delete(arr_voltage.min)
-              remove_max_voltage = arr_voltage.delete(arr_voltage.max)
-              avg_voltage = arr_voltage.sum.to_f/arr_voltage.length
-              
-              # avg of all the current
-              remove_min_current = arr_current.delete(arr_current.min)
-              remove_max_current = arr_current.delete(arr_current.max)
-              avg_current = arr_current.sum.to_f/arr_current.length
-              
-              # avg of all the power
-              remove_min_power = arr_power.delete(arr_power.min)
-              remove_max_power = arr_power.delete(arr_power.max)
-              avg_power = arr_power.sum.to_f/arr_power.length
 
-              # avg of all the dimming
-              remove_min_dimming = arr_dimming.delete(arr_dimming.min)
-              remove_max_dimming = arr_dimming.delete(arr_dimming.max)
-              avg_dimming = arr_dimming.sum/arr_dimming.length
-            rescue
-              # it will return null if data is not found
-            end
+          # smart logic to calculate the data
+          smart_logic
 
-            new_arr << {"id": params[:id],"voltage": avg_voltage,"current": avg_current, "power": avg_power, "dimming": avg_dimming, "time_stamp": Date.parse(params[:start_date]).beginning_of_day + (x-1)*params[:t_sampling].to_i*60 }
-            new_arr.each do |m|
-              ts = m[:time_stamp]
-              @new_res[ts] = {} if @new_res[ts].nil?
-              @new_res[ts][:id] = m[:id]
-              @new_res[ts][:voltage] = m[:voltage].round(2)
-              @new_res[ts][:current] = m[:current].round(2)
-              @new_res[ts][:power] = m[:power].round(2)
-              @new_res[ts][:dimming] = m[:dimming]
-              @new_res[ts][:time_stamp] = m[:time_stamp]
-              @new_res[ts][:real_data] = false
-            end
-          end
           render :json => {:data => @new_res}
         else
           render :json => {:status => 404, :notice => "No result found"}
@@ -169,6 +134,7 @@ class EdLogicaldevsController < ApplicationController
     end
   end
 
+# ****************end*******************************
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_ed_logicaldev
@@ -180,6 +146,8 @@ class EdLogicaldevsController < ApplicationController
       params.require(:ed_logicaldev).permit(:name, :address, :seqbridge, :seqcms, :ed_classlogicaldev_id, :qr)
     end
 
+
+    # ****************copy data from here******************************* 
     def counter
       @af.each do |data|
         if data.adesc_flampmonitor_id == 6
@@ -242,4 +210,65 @@ class EdLogicaldevsController < ApplicationController
       end
       UnrealDataSearch.where(dimming: nil).delete_all
     end
+
+    def smart_logic
+      (1..params[:number_of_res].to_i).each do |x|
+        # search of unreal data from the table
+        unreal_data = UnrealDataSearch.where(time_stamp: Date.parse(params[:start_date]).beginning_of_day + (x-1)*params[:t_sampling].to_i*60..Date.parse(params[:end_date]).beginning_of_day + x*params[:t_sampling].to_i*60)
+
+        # adding all the data values into their respecitve array
+        unreal_data.each do |data|
+          voltage = data[:voltage]
+          current = data[:current]
+          power = data[:power]
+          dimming = data[:dimming]
+          @arr_voltage << voltage
+          @arr_current << current
+          @arr_power << power
+          @arr_dimming << dimming
+        end
+
+        begin
+          # avg of all the voltage
+          remove_min_voltage = @arr_voltage.delete(@arr_voltage.min)
+          remove_max_voltage = @arr_voltage.delete(@arr_voltage.max)
+          @avg_voltage = @arr_voltage.sum.to_f/@arr_voltage.length
+          
+          # avg of all the current
+          remove_min_current = @arr_current.delete(@arr_current.min)
+          remove_max_current = @arr_current.delete(@arr_current.max)
+          @avg_current = @arr_current.sum.to_f/@arr_current.length
+          
+          # avg of all the power
+          remove_min_power = @arr_power.delete(@arr_power.min)
+          remove_max_power = @arr_power.delete(@arr_power.max)
+          @avg_power = @arr_power.sum.to_f/@arr_power.length
+
+          # avg of all the dimming
+          remove_min_dimming = @arr_dimming.delete(@arr_dimming.min)
+          remove_max_dimming = @arr_dimming.delete(@arr_dimming.max)
+          @avg_dimming = @arr_dimming.sum/@arr_dimming.length
+        rescue
+          # it will return null if data is not found
+        end
+
+        # adding the avg data in array
+        @new_arr << {"id": params[:id],"voltage": @avg_voltage,"current": @avg_current, "power": @avg_power, "dimming": @avg_dimming, "time_stamp": Date.parse(params[:start_date]).beginning_of_day + (x-1)*params[:t_sampling].to_i*60 }
+
+        # group the data with time_stamp
+        @new_arr.each do |m|
+          ts = m[:time_stamp]
+          @new_res[ts] = {} if @new_res[ts].nil?
+          @new_res[ts][:id] = m[:id]
+          @new_res[ts][:voltage] = m[:voltage].round(2)
+          @new_res[ts][:current] = m[:current].round(2)
+          @new_res[ts][:power] = m[:power].round(2)
+          @new_res[ts][:dimming] = m[:dimming]
+          @new_res[ts][:time_stamp] = m[:time_stamp]
+          @new_res[ts][:real_data] = false
+        end
+      end
+    end
+
+    # ****************end*******************************
 end
