@@ -66,10 +66,10 @@ class EdLogicaldevsController < ApplicationController
   # smart data get monitoring api
   def get_monitoring_profile
     # find all the data with id
-    @af = AFlampmonitorHist.where(ed_logicaldev_id: params[:id], created_at: Date.parse(params[:start_date]).beginning_of_day..Date.parse(params[:end_date]).end_of_day)
+    elspl = EdLogicaldevSiPhysicaldevlamp.find_by(ed_logicaldev_id: params[:id])
 
-    if @af.present?
-      elspl = EdLogicaldevSiPhysicaldevlamp.find_by(ed_logicaldev_id: params[:id])
+    if elspl.present?
+      @af = AFlampmonitorHist.where(ed_logicaldev_id: params[:id], created_at: Date.parse(params[:start_date]).beginning_of_day..Date.parse(params[:end_date]).end_of_day)
       similar_data = SiPhysicaldevlamp.find_by(id: elspl.si_physicaldevlamp_id)
       @n = params[:number_of_times]
       @arr = []
