@@ -69,7 +69,7 @@ class EdLogicaldevsController < ApplicationController
     elspl = EdLogicaldevSiPhysicaldevlamp.find_by(ed_logicaldev_id: params[:id])
 
     if elspl.present?
-      @af = AFlampmonitorHist.where(ed_logicaldev_id: params[:id], created_at: Date.parse(params[:start_date]).beginning_of_day..Date.parse(params[:end_date]).end_of_day)
+    @af = AFlampmonitorHist.where(ed_logicaldev_id: params[:id], created_at: Date.parse(params[:start_date]).beginning_of_day..Date.parse(params[:end_date]).end_of_day)
       similar_data = SiPhysicaldevlamp.find_by(id: elspl.si_physicaldevlamp_id)
       @n = params[:number_of_times]
       @arr = []
@@ -232,22 +232,38 @@ class EdLogicaldevsController < ApplicationController
           # avg of all the voltage
           remove_min_voltage = @arr_voltage.delete(@arr_voltage.min)
           remove_max_voltage = @arr_voltage.delete(@arr_voltage.max)
-          @avg_voltage = @arr_voltage.sum.to_f/@arr_voltage.length
+          if @arr_voltage.length > 0
+            @avg_voltage = @arr_voltage.sum.to_f/@arr_voltage.length
+          else
+            @avg_voltage = 0
+          end
           
           # avg of all the current
           remove_min_current = @arr_current.delete(@arr_current.min)
           remove_max_current = @arr_current.delete(@arr_current.max)
-          @avg_current = @arr_current.sum.to_f/@arr_current.length
+          if @arr_current.length > 0
+            @avg_current = @arr_current.sum.to_f/@arr_current.length
+          else
+            @avg_current = 0
+          end
           
           # avg of all the power
           remove_min_power = @arr_power.delete(@arr_power.min)
           remove_max_power = @arr_power.delete(@arr_power.max)
-          @avg_power = @arr_power.sum.to_f/@arr_power.length
+          if @arr_power.length > 0
+            @avg_power = @arr_power.sum.to_f/@arr_power.length
+          else
+            @avg_power = 0
+          end
 
           # avg of all the dimming
           remove_min_dimming = @arr_dimming.delete(@arr_dimming.min)
           remove_max_dimming = @arr_dimming.delete(@arr_dimming.max)
-          @avg_dimming = @arr_dimming.sum/@arr_dimming.length
+          if @arr_dimming.length > 0
+            @avg_dimming = @arr_dimming.sum/@arr_dimming.length
+          else
+            @avg_dimming = 0
+          end
         rescue
           # it will return null if data is not found
         end
