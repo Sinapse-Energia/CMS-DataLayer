@@ -231,40 +231,40 @@ class EdLogicaldevsController < ApplicationController
         begin
           # avg of all the voltage
           if @arr_voltage.length > 2
-            @arr_voltage.sort
-            remove_min_voltage = @arr_voltage.delete(@arr_voltage[0])
-            remove_max_voltage = @arr_voltage.delete(@arr_voltage[-1])
-            @avg_voltage = @arr_voltage.sum.to_f/@arr_voltage.length
+            sorted_arr_voltage = @arr_voltage.sort
+            remove_min_voltage = @arr_voltage.delete(sorted_arr_voltage[0])
+            remove_max_voltage = @arr_voltage.delete(sorted_arr_voltage[-1])
+            @avg_voltage = sorted_arr_voltage.sum.to_f/sorted_arr_voltage.length
           else
             @avg_voltage = 0
           end
           
           # avg of all the current
           if @arr_current.length > 2
-            @arr_current.sort
-            remove_min_current = @arr_current.delete(@arr_current[0])
-            remove_max_current = @arr_current.delete(@arr_current[-1])
-            @avg_current = @arr_current.sum.to_f/@arr_current.length
+            sorted_arr_current = @arr_current.sort
+            remove_min_current = @arr_current.delete(sorted_arr_current[0])
+            remove_max_current = @arr_current.delete(sorted_arr_current[-1])
+            @avg_current = sorted_arr_current.sum.to_f/sorted_arr_current.length
           else
             @avg_current = 0
           end
           
           # avg of all the power
           if @arr_power.length > 2
-            @arr_power.sort
-            remove_min_power = @arr_power.delete(@arr_power[0])
-            remove_max_power = @arr_power.delete(@arr_power[-1])
-            @avg_power = @arr_power.sum.to_f/@arr_power.length
+            sorted_arr_power = @arr_power.sort
+            remove_min_power = @arr_power.delete(sorted_arr_power[0])
+            remove_max_power = @arr_power.delete(sorted_arr_power[-1])
+            @avg_power = sorted_arr_power.sum.to_f/sorted_arr_power.length
           else
             @avg_power = 0
           end
 
           # avg of all the dimming
           if @arr_dimming.length > 2
-            @arr_dimming.sort
-            remove_min_dimming = @arr_dimming.delete(@arr_dimming[0])
-            remove_max_dimming = @arr_dimming.delete(@arr_dimming[-1])
-            @avg_dimming = @arr_dimming.sum/@arr_dimming.length
+            sorted_arr_dimming = @arr_dimming.sort
+            remove_min_dimming = @arr_dimming.delete(sorted_arr_dimming[0])
+            remove_max_dimming = @arr_dimming.delete(sorted_arr_dimming[-1])
+            @avg_dimming = sorted_arr_dimming.sum/sorted_arr_dimming.length
           else
             @avg_dimming = 0
           end
